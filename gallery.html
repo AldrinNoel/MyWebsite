@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Photo Gallery</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Calibri, Arial, sans-serif;
+    background:#ffffff;
+    color:#203512;
+}
+
+
+.container{
+    max-width:1200px;
+    margin:80px auto;
+    padding:0 24px;
+}
+
+.page-title{
+    font-family:"Times New Roman", Times, serif;
+    text-align:center;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:14px;
+    opacity:0.7;
+    margin-bottom:40px;
+}
+
+/* ===== TOP NAVIGATION (UPGRADED) ===== */
+.category-nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:50px;
+}
+
+.category-nav a{
+    text-decoration:none;
+    padding:8px 16px;
+    border:1px solid #a85100;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    color:#203512;
+    transition:0.2s ease;
+}
+
+.category-nav a:hover{
+    background:#faa500;
+    color:#ffffff;
+}
+
+/* ===== Section title ===== */
+h2{
+    font-family:"Times New Roman", Times, serif;
+    margin-bottom:15px;
+}
+
+/* ===== Grid ===== */
+.grid{
+    margin:20px 0 70px;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:18px;
+}
+
+/* ===== Card ===== */
+.card{
+    cursor:pointer;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+    display:block;
+    transition:0.25s ease;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+/* caption */
+.caption{
+    margin-top:8px;
+}
+
+.caption h3{
+    margin:0;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.caption p{
+    margin:2px 0 0;
+    font-size:12px;
+    opacity:0.7;
+}
+
+
+.float-buttons{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    display:flex;
+    gap:10px;
+}
+
+.float-buttons a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 14px;
+    font-size:12px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition:0.2s ease;
+}
+
+.float-buttons a:hover{
+    background:#faa500;
+}
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.85);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:2000;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+}
+footer{
+    text-align:center;
+    margin-top:40px;
+    font-size:14px;
+    opacity:0.7;
+}
+
+
+</style>
+</head>
+
+<body>
+  
+
+  
+<main id="top" class="container">
+
+<div class="page-title">Photo Gallery</div>
+<div class="subtitle">A collection of moments, interests, and inspirations.</div>
+
+<!-- BETTER NAV -->
+<div class="category-nav">
+  <a href="#art">Art</a>
+  <a href="#scenery">Scenery</a>
+  <a href="#food">Food / Drinks</a>
+  <a href="#people">People</a>
+  
+</div>
+
+
+<!-- ================= ART ================= -->
+<h2 id="art">Art</h2>
+<div class="grid">
+  <div class="card"><img src="https://i.pinimg.com/736x/6b/81/39/6b813907ad5d1c792a9c07ed043fb3ee.jpg"><div class="caption"><h3>Katara</h3><p>Fan art after watching ATLAB.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/1200x/24/e6/2f/24e62fd9ac4d4983e9a315bbd706d2f1.jpg"><div class="caption"><h3>Reference</h3><p>Drawn straight from a reference</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/1200x/97/62/40/9762400551426559ad0d4e0569d2abf5.jpg"><div class="caption"><h3>Color Study</h3><p>Exploring palettes.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/ea/16/22/ea1622db737f61b55f07446d17b6a362.jpg"><div class="caption"><h3>Logo</h3><p>Experimenting and trying game logo design.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/1200x/b5/84/b5/b584b587b724af0de8d2114b23af3203.jpg"><div class="caption"><h3>Concept</h3><p>Early idea draft.</p></div></div>
+</div>
+  
+<!-- ================= SCENERY ================= -->
+<h2 id="scenery">Scenery</h2>
+<div class="grid">
+  <div class="card"><img src="https://i.pinimg.com/736x/43/8d/66/438d66c7e8636cc8d96dd00ca8d0890d.jpg"><div class="caption"><h3>Nostalgic</h3><p>View of the Mall in a differeent Perspective.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/c9/49/65/c9496592ec5afd872b3aa4c5c2db2299.jpg"><div class="caption"><h3>Province</h3><p>Calming Rice fields.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/aa/5e/8a/aa5e8a111440354c40777cedd1937074.jpg"><div class="caption"><h3>Sunset</h3><p>Golden hour.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/2e/ef/8c/2eef8c8630f91f8b1e103a4e438dab9d.jpg"><div class="caption"><h3>Forest</h3><p>Quiet escape.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/d5/fe/97/d5fe9729a8a86f84d7e5ecf5698fc41f.jpg"><div class="caption"><h3>City</h3><p>Night lights.</p></div></div>
+</div>
+
+
+  <!-- ================= FOOD ================= -->
+<h2 id="food">Food and Drinks</h2>
+<div class="grid">
+  <div class="card"><img src="https://i.pinimg.com/736x/19/29/18/1929184b533486dfd00e90fc3df86c23.jpg"><div class="caption"><h3>Macktails</h3><p>P. Campa Drinks</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/d3/d1/ff/d3d1ff86a91092e18459d89f208fc709.jpg"><div class="caption"><h3>Noodles</h3><p>Authentic Japanese Food</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/52/a1/14/52a114a917097b2c1a875bef5452fd89.jpg"><div class="caption"><h3>Strawberry Ice Cream</h3><p>Baguio Specialty</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/474x/1b/d0/03/1bd003832459423d324bb62c851809a4.jpg"><div class="caption"><h3>Beer</h3><p>Drinks to have while golfing.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/f9/e0/21/f9e021e8c171ac4648d26a6c6efb4618.jpg"><div class="caption"><h3>Snacks</h3><p>Snacks to partner with beer and long talks</p></div></div>
+</div>
+
+<!-- ================= PEOPLE ================= -->
+<h2 id="people">People</h2>
+<div class="grid">
+  <div class="card"><img src="https://i.pinimg.com/736x/da/8a/d6/da8ad63d8159cacb69474060b5b6a2da.jpg"><div class="caption"><h3>Friends</h3><p>After class hangout.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/7e/12/0f/7e120fc0fca462bc9a126bd5719dec34.jpg"><div class="caption"><h3>Moments</h3><p>Candid memory.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/40/63/9d/40639d9772234d49736357d3c687d70f.jpg"><div class="caption"><h3>Group</h3><p>Fun activity.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/ff/4f/31/ff4f31a48e9f35b590fd6eb2932f15a6.jpg"><div class="caption"><h3>Smile</h3><p>Simple day.</p></div></div>
+  <div class="card"><img src="https://i.pinimg.com/736x/a4/cd/fc/a4cdfc495f128a692c64caefaa3cadc4.jpg"><div class="caption"><h3>Bond</h3><p>Shared laughs.</p></div></div>
+</div>
+
+
+
+<footer>
+  <p>Gallery by Aldrin Noel Bandoy</p>
+</footer>
+
+</main>
+
+
+<!-- Floating Buttons -->
+<div class="float-buttons">
+  <a href="#top">Top ↑</a>
+  <a href="index.html">Home</a>
+</div>
+
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="">
+</div>
+
+
+<script>
+const cards = document.querySelectorAll(".card img");
+const lightbox = document.getElementById("lightbox");
+const lightImg = lightbox.querySelector("img");
+
+cards.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightImg.src = img.src;
+  });
+});
+
+/* click outside → close */
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+</script>
+
+</body>
+</html>
