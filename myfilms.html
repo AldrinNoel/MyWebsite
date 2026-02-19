@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Film Movies Page</title>
+
+<style>
+
+/* ================= BASE ================= */
+body{
+    margin:0;
+    background:#ffffff;
+    font-family:"Segoe UI", Calibri, Arial, sans-serif;
+    color:#203512;
+    line-height:1.8;
+}
+
+.container{
+    max-width:1000px;
+    margin:100px auto 80px;
+    padding:0 24px;
+}
+
+/* ================= NAV ================= */
+.top-nav{
+    position:fixed;
+    top:25px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#ffffff;
+    padding:10px 25px;
+    border-radius:40px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.06);
+    font-size:13px;
+    letter-spacing:1px;
+    z-index:1000;
+}
+
+.top-nav a{
+    text-decoration:none;
+    color:#203512;
+    margin:0 15px;
+    opacity:0.7;
+}
+
+.top-nav a:hover{
+    color:#faa500;
+    opacity:1;
+}
+.footer {
+    margin-top: 100px;
+    font-size: 0.9em;
+    border-top: 1px solid #203512;
+    padding-top: 20px;
+}
+
+
+/* ================= TITLE ================= */
+h1{
+    font-family:Cambria, serif;
+    font-size:2.5rem;
+    text-align:center;
+}
+
+hr{
+    border:none;
+    height:2px;
+    width:50px;
+    background:#faa500;
+    margin:20px auto 60px;
+}
+
+/* ================= MOVIE SECTION ================= */
+.category{
+    margin-bottom:80px;
+}
+
+.category h2{
+    border-left:4px solid #faa500;
+    padding-left:12px;
+    margin-bottom:40px;
+}
+
+.movie{
+    margin-bottom:60px;
+}
+
+.movie-container{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.poster img{
+    width:240px;
+    height:340px;
+    object-fit:cover;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.poster img:hover{
+    transform:scale(1.04);
+}
+
+.trailer iframe{
+    width:420px;
+    height:240px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+p{
+    margin:10px 0;
+}
+
+/* ================= LIGHTBOX ================= */
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(17,16,8,0.92);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+}
+
+.lightbox img{
+    max-width:85%;
+    max-height:80%;
+    border-radius:12px;
+}
+
+/* ================= FLOAT BUTTONS ================= */
+.float-buttons{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    display:flex;
+    gap:10px;
+}
+
+.float-buttons a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 14px;
+    font-size:12px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.float-buttons a:hover{
+    background:#faa500;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top-nav">
+    <a href="#comedy">Comedy</a>
+    <a href="#fantasy">Fantasy</a>
+    <a href="#dystopian">Dystopian</a>
+    <a href="#drama">Drama</a>
+    <a href="#horror">Horror</a>
+</div>
+
+<div class="container">
+
+<h1 id="top">My Film Movies</h1>
+<hr>
+
+<!-- ================= COMEDY ================= -->
+<div class="category" id="comedy">
+<h2>COMEDY</h2>
+
+<!-- Bad Moms -->
+<div class="movie">
+<h3>Bad Moms (2016)</h3>
+<div class="movie-container">
+
+<div class="poster">
+<img src="https://i.pinimg.com/1200x/91/0e/93/910e93232e0cc3ee62da0ada4f007568.jpg" alt="Bad Moms Poster" class="card">
+</div>
+
+<div class="trailer">
+<!-- REPLACE VIDEO_ID -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IHBLbGvwO6I?si=s1ekOr1W8jdnC4oX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+<p><strong>Director:</strong> Jon Lucas & Scott Moore</p>
+<p><strong>Stars:</strong> Mila Kunis, Kristen Bell, Kathryn Hahn</p>
+<p><strong>Synopsis:</strong> Overworked mothers rebel against unrealistic parenting standards and embrace freedom.</p>
+</div>
+
+<!-- Pitch Perfect -->
+<div class="movie">
+<h3>Pitch Perfect (2012)</h3>
+<div class="movie-container">
+<div class="poster">
+<img src="https://i.pinimg.com/736x/b4/42/77/b442778804ac52233a903b035f9a765e.jpg" class="card">
+</div>
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8dItOM6eYXY?si=UXsiSQVH-juxMXxB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+<p><strong>Director:</strong> Jason Moore</p>
+<p><strong>Stars:</strong> Anna Kendrick, Rebel Wilson</p>
+<p><strong>Synopsis:</strong> A college a cappella group competes nationally while navigating friendship and rivalry.</p>
+</div>
+
+<!-- Knives Out -->
+<div class="movie">
+<h3>Knives Out (2019)</h3>
+<div class="movie-container">
+<div class="poster">
+<img src="https://i.pinimg.com/736x/8e/1a/64/8e1a6461bfb34d51a7337c0c356d51d0.jpg" class="card">
+</div>
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qGqiHJTsRkQ?si=cfbGDMPfiIIX235E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+<p><strong>Director:</strong> Rian Johnson</p>
+<p><strong>Stars:</strong> Daniel Craig, Ana de Armas, Chris Evans</p>
+<p><strong>Synopsis:</strong> A detective investigates the suspicious death of a wealthy novelist.</p>
+</div>
+
+<!-- Bad Teacher -->
+<div class="movie">
+<h3>Bad Teacher (2011)</h3>
+<div class="movie-container">
+<div class="poster">
+<img src="https://i.pinimg.com/736x/93/95/2b/93952b7dcc306865397ad436f90473b3.jpg" class="card">
+</div>
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2SvidA48zfA?si=gcgeUKYQlgy-nXiT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+<p><strong>Director:</strong> Jake Kasdan</p>
+<p><strong>Stars:</strong> Cameron Diaz, Justin Timberlake</p>
+<p><strong>Synopsis:</strong> A lazy teacher schemes to marry a rich colleague.</p>
+
+<!-- ================= FANTASY ================= -->
+<div class="category" id="fantasy">
+
+<hr>
+<h2>FANTASY</h2>
+
+<!-- Harry Potter -->
+<div class="movie">
+<h3>Harry Potter and the Sorcerer's Stone (2001)</h3>
+<div class="movie-container">
+
+<div class="poster">
+<img src="https://i.pinimg.com/736x/2b/14/da/2b14da6668dcc8e6456ab0ce9bcf1a5d.jpg" alt="Harry Potter Poster" class="card">
+</div>
+
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NBClQpIsEXk?si=f8kMKxEjbBLCSRB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+<p><strong>Director:</strong> Chris Columbus</p>
+<p><strong>Stars:</strong> Daniel Radcliffe, Emma Watson, Rupert Grint</p>
+<p><strong>Synopsis:</strong> An orphaned boy discovers he is a wizard and begins his magical journey at Hogwarts School of Witchcraft and Wizardry.</p>
+</div>
+
+
+
+<!-- How to Train Your Dragon -->
+<div class="movie">
+<h3>How to Train Your Dragon (2010)</h3>
+<div class="movie-container">
+
+<div class="poster">
+<img src="https://i.pinimg.com/736x/2f/7f/1f/2f7f1fb960670ea9ecea7c736ffcce09.jpg" class="card">
+</div>
+
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2AKsAxrhqgM?si=5hS6xotODjwJ64rR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+<p><strong>Director:</strong> Chris Sanders & Dean DeBlois</p>
+<p><strong>Stars (Voices):</strong> Jay Baruchel, Gerard Butler</p>
+<p><strong>Synopsis:</strong> A young Viking forms an unlikely friendship with a dragon, changing his village’s beliefs forever.</p>
+</div>
+
+
+<!-- Percy Jackson -->
+<div class="movie">
+<h3>Percy Jackson & the Olympians: The Lightning Thief (2010)</h3>
+<div class="movie-container">
+
+<div class="poster">
+<img src="https://i.pinimg.com/736x/ae/54/73/ae547396587044a77773210577478c76.jpg" alt="Percy Jackson Poster" class="card">
+</div>
+
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w6aYjbpBm-E?si=YMxqY5mw36boaoNP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+<p><strong>Director:</strong> Chris Columbus</p>
+<p><strong>Stars:</strong> Logan Lerman, Alexandra Daddario</p>
+<p><strong>Synopsis:</strong> A teenage demigod discovers his true identity and must prevent a war among the Greek gods.</p>
+</div>
+  
+<hr>
+
+<!-- ================= DYSTOPIAN ================= -->
+<div class="category" id="dystopian">
+<h2>DYSTOPIAN</h2>
+
+<!-- The Hunger Games -->
+<div class="movie">
+<h3>The Hunger Games (2012)</h3>
+<div class="movie-container">
+
+<div class="poster">
+<img src="https://i.pinimg.com/736x/39/50/18/39501814f48a5cb79f8b00aba403e1b6.jpg" alt="The Hunger Games Poster" class="card">
+</div>
+
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mfmrPu43DF8?si=H93Dyl5TXicGAUCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+<p><strong>Director:</strong> Gary Ross</p>
+<p><strong>Stars:</strong> Jennifer Lawrence, Josh Hutcherson</p>
+<p><strong>Synopsis:</strong> In a dystopian future, teenagers are forced to compete in a televised survival game where only one can survive.</p>
+</div>
+
+
+<!-- Divergent -->
+<div class="movie">
+<h3>Divergent (2014)</h3>
+<div class="movie-container">
+
+<div class="poster">
+<img src="https://i.pinimg.com/1200x/13/6d/12/136d12185f6d2c9537dc5a5e2a01e1c3.jpg" alt="Divergent Poster" class="card">
+</div>
+
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/npSkNAHQ2kI?si=glwyv1X2r4xsG_y4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+<p><strong>Director:</strong> Neil Burger</p>
+<p><strong>Stars:</strong> Shailene Woodley, Theo James</p>
+<p><strong>Synopsis:</strong> A young woman who does not fit into society’s strict faction system discovers she is “Divergent” and threatens the balance of power.</p>
+</div>
+
+<hr>
+<!-- ================= DRAMA ================= -->
+<div class="category" id="drama">
+<h2>DRAMA</h2>
+
+<!-- Flipped -->
+<div class="movie">
+<h3>Flipped (2010)</h3>
+<div class="movie-container">
+
+<div class="poster">
+
+<img src="https://i.pinimg.com/736x/c7/96/51/c7965190ce6e610859fe7a39493b51a1.jpg" alt="Flipped Poster" class="card">
+</div>
+
+<div class="trailer">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q40GxY5n2Dg?si=yllg9C3hr6xUFm4z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+<p><strong>Director:</strong> Rob Reiner</p>
+<p><strong>Stars:</strong> Madeline Carroll, Callan McAuliffe</p>
+<p><strong>Synopsis:</strong> A coming-of-age love story told from two perspectives, exploring first love and misunderstandings.</p>
+</div>
+
+
+<!-- No Hard Feelings -->
+<div class="movie">
+<h3>No Hard Feelings (2023)</h3>
+<div class="movie-container">
+
+<div class="poster">
+<img src="https://i.pinimg.com/1200x/81/f2/1f/81f21fae7e6c0e853426269aba991174.jpg" alt="No Hard Feelings Poster" class="card">
+</div>
+
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W3-slBOV84w?si=t7JtGaelQwFv4YTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+<p><strong>Director:</strong> Gene Stupnitsky</p>
+<p><strong>Stars:</strong> Jennifer Lawrence, Andrew Barth Feldman</p>
+<p><strong>Synopsis:</strong> A woman is hired to date a socially awkward teen before he heads off to college, with unexpected comedic results.</p>
+</div>
+
+</div>
+<!-- ================= HORROR ================= -->
+  <hr>
+<div class="category" id="horror">
+<h2>HORROR</h2>
+
+<!-- World War Z -->
+<div class="movie">
+<h3>World War Z (2013)</h3>
+<div class="movie-container">
+
+<div class="poster">
+<img src="https://i.pinimg.com/736x/c8/d6/8b/c8d68b174ca78c1d9e28f2f1b746b9be.jpg" alt="World War Z Poster" class="card">
+</div>
+
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4EC7P5WdUko?si=wgGnBO9hIlopv-QD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+<p><strong>Director:</strong> Marc Forster</p>
+<p><strong>Stars:</strong> Brad Pitt</p>
+<p><strong>Synopsis:</strong> A former UN investigator races against time to stop a global zombie pandemic threatening humanity.</p>
+</div>
+
+
+
+<!-- Warm Bodies -->
+<div class="movie">
+<h3>Warm Bodies (2013)</h3>
+<div class="movie-container">
+
+<div class="poster">
+<img src="https://i.pinimg.com/736x/14/2b/c2/142bc287d048a9bd8d4e929f93b1c306.jpg" alt="Warm Bodies Poster" class="card">
+</div>
+
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/07s-cNFffDM?si=_-bLYO1MJHu1E7xO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+<p><strong>Director:</strong> Jonathan Levine</p>
+<p><strong>Stars:</strong> Nicholas Hoult, Teresa Palmer</p>
+<p><strong>Synopsis:</strong> A zombie unexpectedly falls in love with a human girl, leading to changes in both their worlds and the zombie population.</p>
+</div>
+
+
+<!-- Ready or Not -->
+<div class="movie">
+<h3>Ready or Not (2019)</h3>
+<div class="movie-container">
+
+<div class="poster">
+<img src="https://i.pinimg.com/736x/78/6c/b8/786cb8b688270e0f2fff80da566c064b.jpg" alt="Ready or Not Poster" class="card">
+</div>
+
+<div class="trailer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZtYTwUxhAoI?si=gEkBLyczY7ZghQtO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+<p><strong>Director:</strong> Matt Bettinelli-Olpin & Tyler Gillett</p>
+<p><strong>Stars:</strong> Samara Weaving</p>
+<p><strong>Synopsis:</strong> On her wedding night, a bride must survive a deadly game imposed by her new in-laws to see daylight again.</p>
+</div>
+
+</div>
+  
+ <!-- Floating Buttons -->
+<div class="float-buttons">
+  <a href="#top">Top ↑</a>
+  <a href="media.html">Media Page</a>
+  <a href="index.html">Home</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="">
+</div>
+
+<script>
+// Lightbox functionality
+const cards = document.querySelectorAll(".card");
+const lightbox = document.getElementById("lightbox");
+const lightImg = lightbox.querySelector("img");
+
+cards.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightImg.src = img.src;
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+</script>
+
+<div class="footer">
+Created by Aldrin Noel Bandoy
+</div>
+
+</div>
+
+  
+  
+</div>
+
