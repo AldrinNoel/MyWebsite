@@ -1,191 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ten Minutes Left and No Other Option</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ten Minutes Left and No Other Option</title>
+
 <style>
- /* Base reset and body styling */
+
+/* ================= BASE ================= */
 body {
     margin: 0;
-    padding: 0;
-    background-color: #f8f8f6;
+    background: #ffffff;
     font-family: "Segoe UI", Calibri, Arial, sans-serif;
     color: #203512;
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
-/* Main content container */
 .container {
     max-width: 850px;
-    margin: 80px auto;
-    padding: 0 22px;
+    margin: 100px auto 80px;
+    padding: 0 24px;
 }
 
-/* Main title */
-h1 {
-    font-family: "Georgia", "Times New Roman", serif;
-    font-size: 2.6em;
-    font-weight: normal;
-    color: #a85100;
-    margin-bottom: 12px;
+/* ================= MINIMAL FLOAT NAV ================= */
+.top-nav {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    padding: 10px 25px;
+    border-radius: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    font-size: 13px;
+    letter-spacing: 1px;
+    z-index: 1000;
 }
 
-/* Section headings */
-h2 {
-    font-family: "Georgia", "Times New Roman", serif;
-    font-size: 1.5em;
-    font-weight: normal;
-    margin-top: 55px;
-    margin-bottom: 15px;
+.top-nav a {
+    text-decoration: none;
     color: #203512;
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: 0.25s ease;
 }
+
+.top-nav a:hover {
+    color: #faa500;
+    opacity: 1;
+}
+
+/* ================= TITLE ================= */
+h1 {
+    font-family: Cambria, serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 hr {
     border: none;
     height: 2px;
-    background-color: #203512;
-    width: 60px;
-    margin: 20px 0 45px 0;
+    width: 50px;
+    background: #faa500;
+    margin: 20px auto 60px;
 }
 
+/* ================= PARAGRAPHS ================= */
 p {
     font-size: 1.05em;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     text-align: justify;
 }
 
-
-p em {
-    font-style: italic;
-    color: #304b24;
+/* ================= SCATTERED IMAGES ================= */
+.float-img {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
+.float-img:hover {
+    transform: scale(1.04);
+}
+
+.left {
+    float: left;
+    margin: 0 25px 15px 0;
+}
+
+.right {
+    float: right;
+    margin: 0 0 15px 25px;
+}
+
+/* Clear floats */
+.clear {
+    clear: both;
+}
+
+/* ================= FOOTER ================= */
 .footer {
-    margin-top: 75px;
+    margin-top: 70px;
+    text-align: center;
     font-size: 0.9em;
-    text-align: right;
     border-top: 1px solid #203512;
     padding-top: 15px;
-    color: #203512;
 }
 
-@media (max-width: 600px) {
-    .container {
-        margin: 50px auto;
+/* ================= LIGHTBOX ================= */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(17,16,8,0.92);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.lightbox img {
+    max-width: 85%;
+    max-height: 80%;
+    border-radius: 12px;
+}
+
+.float-buttons{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    display:flex;
+    gap:10px;
+}
+
+.float-buttons a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 14px;
+    font-size:12px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition:0.2s ease;
+}
+
+.float-buttons a:hover{
+    background:#faa500;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .float-img,
+    .left,
+    .right {
+        float: none;
+        display: block;
+        margin: 20px auto;
     }
-
-    h1 {
-        font-size: 2.2em;
-    }
-
-    h2 {
-        font-size: 1.35em;
-    }
-  
-}
-.back-top{
-    margin: 10px 0 40px;
-    text-align: right;
 }
 
-.back-top a{
-    text-decoration: none;
-    font-size: 13px;
-    color: #203512;
-    opacity: 0.7;
-    transition: 0.2s ease;
-}
-
-.back-top a:hover{
-    opacity: 1;
-    color: #faa500;
-}
-  .back-home {
-    margin: 20px 0;         
-    text-align: left;         
-}
-
-.back-home a {
-    text-decoration: none;     
-    font-size: 14px;          
-    color: #203512;           
-    font-weight: bold;
-    opacity: 0.8;             
-    transition: 0.2s ease;
-}
-
-.back-home a:hover {
-    color: #faa500;           
-    opacity: 1;
-}
 </style>
 </head>
 
 <body>
-    <div class="container">
 
-        <h1 id="top">Ten Minutes Left and No Other Option</h1>
-        <hr>
-
-        <h2>Introduction</h2>
-
-        <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            I have this thing where I would think through situations and stay calm, when it feels like a solution is absolutely needed. When things get serious, my brain just kind of locks in and starts working. It helps, but it’s also stressful
-            having to rely on it too often strains not only my mental health but also physically. Over time, it became an instinct something that guides me during the tougher
-            moments of my life.
-        </p>
-
-        <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            There was this one experience I had in high school that changed how I saw AI. It wasn’t anything dramatic, just a normal school day, but the way it happened made me stop and think about learning, pressure, and how much we actually rely on convenience.
-
-            It was just a regular day, and we were given an in-class assignment. Naturally, I would’ve just used AI. That felt like the obvious choice. But for some reason, I felt this rush inside of me telling me to stop.
-            And I actually did. I paused, looked to my left, then to my right, and saw that almost everyone was already done.
-That’s when I felt this strange emptiness. Not jealousy, just this quiet thought sitting in my head
-            is the future generation going to be alright? I didn’t have much time to think about it though,
-            because the situation quickly became urgent.
-The teacher announced that there were only ten minutes left. Adrenaline kicked in, and my instincts
-            took over. There really wasn’t another option, so I used AI. In an instant, the essay was done.
-            All that was left was to submit it on time.
- But when I read the first paragraph of the two-paragraph essay, it didn’t feel right.
-            It didn’t sound like me. So I revised it, changing the wording and structure until it felt more like
-            something I would actually write.
-      With one minute left, my computer suddenly lost its internet connection. I refreshed the page again
-            and again until the submission page finally appeared. With only seconds left, I dragged my downloaded
-            PDF into the submission box and submitted it just in time.
-        </p>
-
-        <h2>Conclusion</h2>
-
-        <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            In the end, I didn’t feel remorse. I felt happy, exalted, and satisfied. Not because AI did the work,
-            but because I still stepped in and made choices. That moment made it clear to me that AI wasn’t the end
-            it was an eye-opener.
-        </p>
-
-        <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            AI is an evolution that forcefully requires people to adapt to its endless capabilities. There’s no shaking it off.
-            The moment people realized how convenient it was, it became engraved into society, just like calculators.
-            What matters now is whether we stay involved in the thinking or let convenience take over completely.
-        </p>
-<div class="back-top">
-  <a href="#top">Back to top ↑</a>
+<div class="top-nav">
+    <a href="#p1">Opening</a>
+    <a href="#p2">Experience</a>
+    <a href="#p3">Reflection</a>
 </div>
-      
-      
-      
-      <!-- DITSSSS LAGAYANNN NGGG PA BALIK LANDING PAGE -->
-<div class="back-home">
-  <a href="index.html">← Back to Home</a>
+
+<div class="container">
+
+<h1 id="top">Ten Minutes Left and No Other Option</h1>
+<hr>
+
+<!-- PARAGRAPH 1 -->
+<p id="p1">
+<img src="https://i.pinimg.com/736x/88/bb/3b/88bb3b83e241e2b7481ed9c457d5f594.jpg" class="float-img left card" alt="">
+<strong>I have this thing where I would think through situations and stay calm</strong>, when it feels like a solution is absolutely needed. When things get serious, my brain just kind of locks in and starts working. It helps, but it’s also stressful having to rely on it too often <strong>strains not only my mental health but also physically</strong>. Over time, it became an instinct something that guides me during the tougher moments of my life.
+</p>
+
+<div class="clear"></div>
+
+<!-- PARAGRAPH 2 -->
+<p id="p2">
+<img src="https://i.pinimg.com/736x/25/12/d7/2512d7f8c87f0f40c12d4c51199d8171.jpg" class="float-img right card" alt="">
+There was this one experience I had in high school that changed how I saw AI. It wasn’t anything dramatic, just a normal school day, but the way it happened made me stop and think about learning, pressure, and how much we actually rely on convenience.
+
+It was just a regular day, and we were given an in-class assignment. Naturally, I would’ve just used AI. That felt like the obvious choice. But for some reason, <strong>I felt this rush inside of me telling me to stop.</strong> And I actually did. I paused, looked to my left, then to my right, and saw that almost everyone was already done. That’s when I felt this strange emptiness. Not jealousy, just this quiet thought sitting in my head <strong>is the future generation going to be alright?</strong> I didn’t have much time to think about it though, because the situation quickly became urgent. The teacher announced that there were only ten minutes left. Adrenaline kicked in, and my instincts took over. There really wasn’t another option, so I used AI. In an instant, the essay was done. All that was left was to submit it on time. But when I read the first paragraph of the two-paragraph essay, it didn’t feel right. <strong>It didn’t sound like me.</strong> So I revised it, changing the wording and structure until it felt more like something I would actually write. With one minute left, my computer suddenly lost its internet connection. I refreshed the page again and again until the submission page finally appeared. With only seconds left, I dragged my downloaded PDF into the submission box and submitted it just in time.
+</p>
+<div class="clear"></div>
+
+<!-- PARAGRAPH 3 -->
+<p id="p3">
+<img src="https://i.pinimg.com/736x/96/24/77/9624773541f114b6ad5e3e1366eec753.jpg" class="float-img right card" alt="">
+In the end, I didn’t feel remorse. I felt happy, exalted, and satisfied. Not because AI did the work, <strong>but because I still stepped in and made choices.</strong> That moment made it clear to me that AI wasn’t the end it was an eye-opener. AI is an evolution that forcefully requires people to adapt to its endless capabilities. There’s no shaking it off. The moment people realized how convenient it was, it became engraved into society, just like calculators. <strong>What matters now is whether we stay involved in the thinking or let convenience take over completely.</strong>
+</p>
+
+<div class="clear"></div>
+
+<div class="footer">
+Written by Aldrin Noel Bandoy
 </div>
-<!-- DITSSSS LAGAYANNN NGGG PA BALIK LANDING PAGE -->
+<!-- Floating Buttons -->
+<div class="float-buttons">
+  <a href="#top">Top ↑</a>
+  <a href="index.html">Home</a>
+</div>
+ 
+</div>
 
-        <div class="footer">
-            Made by: Noel Bandoy
-        </div>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="">
+</div>
 
-    </div>
+<script>
+const cards = document.querySelectorAll(".card");
+const lightbox = document.getElementById("lightbox");
+const lightImg = lightbox.querySelector("img");
+
+cards.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightImg.src = img.src;
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+</script>
+
 </body>
 </html>
