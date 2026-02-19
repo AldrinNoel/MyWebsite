@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What I Consume, What Shapes Me</title>
+
+<style>
+
+/* ================= BASE ================= */
+body {
+    margin: 0;
+    background: #ffffff;
+    font-family: "Segoe UI", Calibri, Arial, sans-serif;
+    color: #203512;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 100px auto 100px;
+    padding: 0 30px;
+}
+
+/* ================= TITLE ================= */
+h1 {
+    font-family: Cambria, serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.title-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #a85100, #faa500);
+    margin: 20px auto 60px;
+    border-radius: 5px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    margin-bottom: 90px;
+}
+
+.circle img {
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.circle img:hover {
+    transform: scale(1.05);
+}
+
+.profile-text {
+    max-width: 650px;
+    margin: 35px auto 0;
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+/* ================= MEDIA ROW ================= */
+.media-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 300px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.box h2 {
+    margin-top: 18px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.box:hover img {
+    transform: scale(1.04);
+}
+
+.box:hover h2 {
+    color: #faa500;
+}
+
+/* ================= LIGHTBOX ================= */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(17,16,8,0.92);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.lightbox img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 12px;
+}
+
+/* ================= FLOAT BUTTON ================= */
+.float-buttons{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+}
+
+.float-buttons a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 16px;
+    font-size:12px;
+    border-radius:6px;
+    letter-spacing:1px;
+    transition:0.2s ease;
+}
+
+.float-buttons a:hover{
+    background:#faa500;
+    color:#203512;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    margin-top: 100px;
+    font-size: 0.9em;
+    border-top: 1px solid #203512;
+    padding-top: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>What I Consume Becomes a Part of Me</h1>
+<div class="title-divider"></div>
+
+<div class="hero">
+    <div class="circle">
+        <img src="https://i.pinimg.com/736x/4d/82/89/4d82898a0bde1c3a2f3fb59edd18ddb6.jpg" alt="Profile Image">
+    </div>
+
+    <div class="profile-text">
+        The music I replay during the times of deep confusion, yearning, and joy. To the films that I sit with Intently,
+        the shows that linger in my thoughts. They shape how I see the world
+        and quietly influence who I am becoming.
+    </div>
+</div>
+
+<div class="media-section">
+
+    <div class="box">
+        <a href="mybeats.html">
+            <img src="https://i.pinimg.com/736x/06/ac/30/06ac30205eac6c241cb15a8224e4f8e8.jpg">
+        </a>
+        <h2>My Music</h2>
+    </div>
+
+    <div class="box">
+        <a href="myfilms.html">
+            <img src="https://i.pinimg.com/736x/46/c9/fc/46c9fc991c3770f46581cc01cd50462c.jpg">
+        </a>
+        <h2>My Films</h2>
+    </div>
+
+    <div class="box">
+        <a href="myshows.html">
+            <img src="https://i.pinimg.com/736x/44/29/7c/44297cbeea06ae4c5c0b2f7e649e7fca.jpg">
+        </a>
+        <h2>My Shows</h2>
+    </div>
+
+</div>
+
+<div class="footer">
+Created by Aldrin Noel Bandoy
+</div>
+
+</div>
+
+<div class="float-buttons">
+  <a href="index.html">Home</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img src="">
+</div>
+
+<script>
+const images = document.querySelectorAll(".box img, .circle img");
+const lightbox = document.getElementById("lightbox");
+const lightImg = lightbox.querySelector("img");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightImg.src = img.src;
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+</script>
+
+</body>
+</html>
