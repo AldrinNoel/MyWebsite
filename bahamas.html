@@ -141,13 +141,13 @@ footer{
 <h1><b>Bahamas</b></h1>
 <div class="divider"></div>
 
-<img
-src="https://i.pinimg.com/1200x/13/5c/c4/135cc4d4b40e95512f8586d8afba42bf.jpg"
-class="main-image"
-alt="Bahamas Beach"
-title="Bahamas White Beach Resort"
-onclick="openImage()"
->
+<a href="https://i.pinimg.com/1200x/13/5c/c4/135cc4d4b40e95512f8586d8afba42bf.jpg">
+    <img 
+        src="https://i.pinimg.com/1200x/13/5c/c4/135cc4d4b40e95512f8586d8afba42bf.jpg"
+        class="main-image"
+        alt="Japan Landscape"
+        title="Bahamas Beach">
+</a>
 
 <div class="content">
 
@@ -187,19 +187,7 @@ Created by: Noel Bandoy
 </div>
 </footer>
 
-<script>
-let imageWindow = null;
 
-function openImage(){
-    const url = "https://i.pinimg.com/1200x/13/5c/c4/135cc4d4b40e95512f8586d8afba42bf.jpg";
-
-    if(imageWindow == null || imageWindow.closed){
-        imageWindow = window.open(url,"bahamasFullView");
-    }else{
-        imageWindow.focus();
-    }
-}
-</script>
 
 </body>
 </html>
