@@ -3,86 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=736">
-<title>Japan – Layers Within</title>
+<title>Italy – Layers Within</title>
 
 <style>
 
-/* ================= BASE ================= */
-body {
-    margin: 0;
-    background: #ffffff;
-    font-family: "Segoe UI", Calibri, Arial, sans-serif;
-    color: #203512;
-    text-align: center;
+body{
+    margin:0;
+    background:#ffffff;
+    font-family:"Segoe UI", Calibri, Arial, sans-serif;
+    color:#203512;
 }
 
-/* ================= CONTAINER ================= */
-.container {
-    width: 736px;
-    margin: 60px auto 120px;
+.container{
+    width:736px;
+    margin:60px auto 120px;
 }
 
-/* ================= TITLE ================= */
-h1 {
-    font-family: Cambria, serif;
-    font-size: 2.7rem;
-    margin-bottom: 15px;
+h1{
+    font-family:Cambria, serif;
+    font-size:2.8rem;
+    margin-bottom:10px;
+    text-align:center;
+    font-weight:bold;
 }
 
-.divider {
-    width: 70px;
-    height: 3px;
-    background: linear-gradient(to right, #a85100, #faa500);
-    margin: 20px auto 50px;
-    border-radius: 5px;
+.divider{
+    width:80px;
+    height:4px;
+    background:linear-gradient(to right,#a85100,#faa500);
+    margin:20px auto 40px;
+    border-radius:6px;
 }
 
-/* ================= IMAGE ================= */
-.main-image {
-    width: 736px;
-    height: auto;
-    border-radius: 18px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+.main-image{
+    width:620px;
+    display:block;
+    margin:0 auto;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s ease;
+    box-shadow:0 18px 40px rgba(0,0,0,0.12);
 }
 
-/* ================= CONTENT ================= */
-.content {
-    max-width: 650px;
-    margin: 40px auto 0;
-    font-size: 1rem;
-    opacity: 0.9;
-    line-height: 1.8;
+.main-image:hover{
+    transform:scale(1.02);
+    box-shadow:0 22px 50px rgba(0,0,0,0.18);
 }
 
-.section-title {
-    font-family: Cambria, serif;
-    font-size: 1.4rem;
-    margin-top: 50px;
-    margin-bottom: 10px;
+.content{
+    max-width:650px;
+    margin:35px auto 0;
+    font-size:1.05rem;
+    line-height:1.9;
+    text-align:left;
 }
 
-/* ================= STICKY HOME BUTTON ================= */
-.home-button {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
+.section-title{
+    font-family:Cambria, serif;
+    font-size:1.45rem;
+    margin-top:45px;
+    margin-bottom:10px;
+    font-weight:bold;
 }
 
-.home-button a {
-    background: #203512;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 18px;
-    font-size: 12px;
-    border-radius: 8px;
-    letter-spacing: 1px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    transition: 0.2s ease;
+p{
+    margin:10px 0;
 }
 
-.home-button a:hover {
-    background: #faa500;
-    color: #203512;
+.home-button{
+    position:fixed;
+    bottom:25px;
+    left:25px;
+}
+
+.home-button a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:13px 20px;
+    font-size:12px;
+    border-radius:10px;
+    letter-spacing:1px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
+    transition:0.25s ease;
+}
+
+.home-button a:hover{
+    background:#faa500;
+    color:#203512;
+}
+
+.map-button{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+}
+
+.map-button a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:13px 20px;
+    font-size:12px;
+    border-radius:10px;
+    letter-spacing:1px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
+    transition:0.25s ease;
+}
+
+.map-button a:hover{
+    background:#faa500;
+    color:#203512;
+}
+
+footer{
+    width:100%;
+    margin-top:80px;
+    padding:25px 0;
+    border-top:1px solid #e5e5e5;
+    font-size:14px;
+}
+
+.footer-content{
+    width:736px;
+    margin:0 auto;
+    text-align:left;
 }
 
 </style>
@@ -92,51 +137,67 @@ h1 {
 
 <div class="container">
 
-<h1>Japan</h1>
+<h1><b>Italy</b></h1>
 <div class="divider"></div>
 
-<img 
-src="https://i.pinimg.com/1200x/5f/f1/8b/5ff18b716b306808ab3783bf9d508288.jpg"
+<img
+src="https://i.pinimg.com/1200x/dc/12/01/dc12011c464a71a27804617a107135e0.jpg"
 class="main-image"
-alt="Japan Landscape">
+alt="Italy Landscape"
+onclick="openImage()"
+>
 
 <div class="content">
 
 <p>
-Japan is a country where ancient tradition meets modern innovation.
-From peaceful temples to glowing city skylines, it carries layers of
-history, art, discipline, and quiet beauty.
+Italy feels like a place where history and everyday life exist side by side. I imagine walking through narrow streets where every building tells a story and every corner holds something worth slowing down for. It represents a longing to experience beauty not as something rare but as something woven into daily living.
 </p>
 
-<div class="section-title">Culture</div>
+<div class="section-title"><b>Culture</b></div>
 <p>
-Rooted in centuries-old customs, Japanese culture values harmony,
-respect, and refinement. Tea ceremonies, calligraphy, and seasonal
-festivals reflect a deep appreciation for detail and balance.
+Life seems centered around connection. Meals last longer, conversations feel meaningful, and public spaces invite people to gather and share moments together. Creativity appears natural and deeply valued.
 </p>
 
-<div class="section-title">Nature</div>
+<div class="section-title"><b>History</b></div>
 <p>
-Cherry blossoms in spring, vibrant maple leaves in autumn,
-and serene mountain landscapes shape the rhythm of life.
-Nature is not separate from daily life — it is woven into it.
+The past feels present everywhere. Ancient structures and historic cities remind visitors how many lives and generations shaped the world we know today. Walking through these places feels like stepping into living history.
 </p>
 
-<div class="section-title">Modern Life</div>
+<div class="section-title"><b>Landscape</b></div>
 <p>
-From Tokyo’s fast-paced districts to minimalist architecture
-and advanced technology, Japan blends the future with tradition
-in a way that feels effortless and intentional.
+Rolling hills, coastal views, and warm city lights create an atmosphere that feels calm and romantic. The scenery does not demand attention loudly but quietly stays with you long after you leave.
 </p>
 
 </div>
-
 </div>
 
-<!-- ================= HOME BUTTON ================= -->
 <div class="home-button">
-    <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 </div>
+
+<div class="map-button">
+<a href="map.html">Back to Map</a>
+</div>
+
+<footer>
+<div class="footer-content">
+Created by: Noel Bandoy
+</div>
+</footer>
+
+<script>
+let imageWindow = null;
+
+function openImage(){
+    const url = "https://i.pinimg.com/1200x/dc/12/01/dc12011c464a71a27804617a107135e0.jpg";
+
+    if(imageWindow == null || imageWindow.closed){
+        imageWindow = window.open(url,"italyFullView");
+    }else{
+        imageWindow.focus();
+    }
+}
+</script>
 
 </body>
 </html>
