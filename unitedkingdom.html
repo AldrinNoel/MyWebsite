@@ -7,76 +7,127 @@
 
 <style>
 
-body {
-    margin: 0;
-    background: #ffffff;
-    font-family: "Segoe UI", Calibri, Arial, sans-serif;
-    color: #203512;
-    text-align: center;
+body{
+    margin:0;
+    background:#ffffff;
+    font-family:"Segoe UI", Calibri, Arial, sans-serif;
+    color:#203512;
 }
 
-.container {
-    width: 736px;
-    margin: 60px auto 120px;
+.container{
+    width:736px;
+    margin:60px auto 120px;
 }
 
-h1 {
-    font-family: Cambria, serif;
-    font-size: 2.7rem;
-    margin-bottom: 15px;
+h1{
+    font-family:Cambria, serif;
+    font-size:2.8rem;
+    margin-bottom:10px;
+    text-align:center;
+    font-weight:bold;
 }
 
-.divider {
-    width: 70px;
-    height: 3px;
-    background: linear-gradient(to right, #a85100, #faa500);
-    margin: 20px auto 50px;
-    border-radius: 5px;
+.divider{
+    width:80px;
+    height:4px;
+    background:linear-gradient(to right,#a85100,#faa500);
+    margin:20px auto 40px;
+    border-radius:6px;
 }
 
-.main-image {
-    width: 736px;
-    height: auto;
-    border-radius: 18px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+.main-image{
+    width:620px;
+    display:block;
+    margin:0 auto;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s ease;
+    box-shadow:0 18px 40px rgba(0,0,0,0.12);
 }
 
-.content {
-    max-width: 650px;
-    margin: 40px auto 0;
-    font-size: 1rem;
-    opacity: 0.9;
-    line-height: 1.8;
+.main-image:hover{
+    transform:scale(1.02);
+    box-shadow:0 22px 50px rgba(0,0,0,0.18);
 }
 
-.section-title {
-    font-family: Cambria, serif;
-    font-size: 1.4rem;
-    margin-top: 50px;
-    margin-bottom: 10px;
+.content{
+    max-width:650px;
+    margin:35px auto 0;
+    font-size:1.05rem;
+    line-height:1.9;
+    text-align:left;
 }
 
-.home-button {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
+.section-title{
+    font-family:Cambria, serif;
+    font-size:1.45rem;
+    margin-top:45px;
+    margin-bottom:10px;
+    font-weight:bold;
 }
 
-.home-button a {
-    background: #203512;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 18px;
-    font-size: 12px;
-    border-radius: 8px;
-    letter-spacing: 1px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    transition: 0.2s ease;
+p{
+    margin:10px 0;
 }
 
-.home-button a:hover {
-    background: #faa500;
-    color: #203512;
+.home-button{
+    position:fixed;
+    bottom:25px;
+    left:25px;
+}
+
+.home-button a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:13px 20px;
+    font-size:12px;
+    border-radius:10px;
+    letter-spacing:1px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
+    transition:0.25s ease;
+}
+
+.home-button a:hover{
+    background:#faa500;
+    color:#203512;
+}
+
+.map-button{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+}
+
+.map-button a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:13px 20px;
+    font-size:12px;
+    border-radius:10px;
+    letter-spacing:1px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
+    transition:0.25s ease;
+}
+
+.map-button a:hover{
+    background:#faa500;
+    color:#203512;
+}
+
+footer{
+    width:100%;
+    margin-top:80px;
+    padding:25px 0;
+    border-top:1px solid #e5e5e5;
+    font-size:14px;
+}
+
+.footer-content{
+    width:736px;
+    margin:0 auto;
+    text-align:left;
 }
 
 </style>
@@ -86,50 +137,67 @@ h1 {
 
 <div class="container">
 
-<h1>United Kingdom</h1>
+<h1><b>United Kingdom</b></h1>
 <div class="divider"></div>
 
-<img 
+<img
 src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad"
 class="main-image"
-alt="United Kingdom Landscape">
+alt="United Kingdom Landscape"
+onclick="openImage()"
+>
 
 <div class="content">
 
 <p>
-The United Kingdom is a place where tradition and modern life
-intertwine effortlessly. From historic castles to contemporary
-city skylines, it carries a layered identity shaped by centuries.
+The United Kingdom feels familiar even to people who have never been there. Its streets, stories, and traditions appear in books and films, creating a quiet sense of connection. I imagine walking through historic roads where the past and present exist together, offering moments of reflection and curiosity.
 </p>
 
-<div class="section-title">History</div>
+<div class="section-title"><b>History</b></div>
 <p>
-Ancient stone circles, royal palaces, and medieval streets
-tell stories of monarchies, revolutions, and cultural change.
-History here is not distant — it is part of everyday life.
+Old castles, royal landmarks, and centuries old buildings remind visitors how deeply history shapes everyday surroundings. Each place seems to carry memories that continue to influence modern life.
 </p>
 
-<div class="section-title">Culture</div>
+<div class="section-title"><b>Culture</b></div>
 <p>
-Literature, music, and theatre have long defined British identity.
-From quiet countryside villages to vibrant urban districts,
-creativity flows through the landscape.
+Art, literature, and music play a strong role in shaping identity. From theatres and museums to small cafés and neighborhoods, creativity feels natural and woven into daily routines.
 </p>
 
-<div class="section-title">Atmosphere</div>
+<div class="section-title"><b>Atmosphere</b></div>
 <p>
-Misty mornings, rolling green hills, and the rhythm of city life
-create a contrast that feels both grounded and dynamic —
-reserved yet expressive.
+The atmosphere feels calm yet lively. Rainy mornings, green landscapes, and active cities create a balance between quiet reflection and movement, making the experience feel thoughtful and alive.
 </p>
 
 </div>
-
 </div>
 
 <div class="home-button">
-    <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 </div>
+
+<div class="map-button">
+<a href="map.html">Back to Map</a>
+</div>
+
+<footer>
+<div class="footer-content">
+Created by: Noel Bandoy
+</div>
+</footer>
+
+<script>
+let imageWindow = null;
+
+function openImage(){
+    const url = "https://images.unsplash.com/photo-1505761671935-60b3a7427bad";
+
+    if(imageWindow == null || imageWindow.closed){
+        imageWindow = window.open(url,"ukFullView");
+    }else{
+        imageWindow.focus();
+    }
+}
+</script>
 
 </body>
 </html>
