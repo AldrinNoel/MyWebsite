@@ -140,12 +140,13 @@ footer{
 <h1><b>United Kingdom</b></h1>
 <div class="divider"></div>
 
-<img
-src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad"
-class="main-image"
-alt="United Kingdom Landscape"
-onclick="openImage()"
->
+<a href="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" target="place">
+    <img 
+        src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad"
+        class="main-image"
+        alt="United Kingdom Landscape"
+        title="United Kingdom Landscape">
+</a>
 
 <div class="content">
 
@@ -185,19 +186,7 @@ Created by: Noel Bandoy
 </div>
 </footer>
 
-<script>
-let imageWindow = null;
 
-function openImage(){
-    const url = "https://images.unsplash.com/photo-1505761671935-60b3a7427bad";
-
-    if(imageWindow == null || imageWindow.closed){
-        imageWindow = window.open(url,"ukFullView");
-    }else{
-        imageWindow.focus();
-    }
-}
-</script>
 
 </body>
 </html>
