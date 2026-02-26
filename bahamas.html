@@ -7,76 +7,128 @@
 
 <style>
 
-body {
-    margin: 0;
-    background: #ffffff;
-    font-family: "Segoe UI", Calibri, Arial, sans-serif;
-    color: #203512;
-    text-align: center;
+body{
+    margin:0;
+    background:#ffffff;
+    font-family:"Segoe UI", Calibri, Arial, sans-serif;
+    color:#203512;
 }
 
-.container {
-    width: 736px;
-    margin: 60px auto 120px;
+.container{
+    width:736px;
+    margin:60px auto 120px;
 }
 
-h1 {
-    font-family: Cambria, serif;
-    font-size: 2.7rem;
-    margin-bottom: 15px;
+h1{
+    font-family:Cambria, serif;
+    font-size:2.8rem;
+    margin-bottom:10px;
+    text-align:center;
+    font-weight:bold;
 }
 
-.divider {
-    width: 70px;
-    height: 3px;
-    background: linear-gradient(to right, #a85100, #faa500);
-    margin: 20px auto 50px;
-    border-radius: 5px;
+.divider{
+    width:80px;
+    height:4px;
+    background:linear-gradient(to right,#a85100,#faa500);
+    margin:20px auto 40px;
+    border-radius:6px;
 }
 
-.main-image {
-    width: 736px;
-    height: auto;
-    border-radius: 18px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+.main-image{
+    width:620px;
+    display:block;
+    margin:0 auto;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s ease;
+    box-shadow:0 18px 40px rgba(0,0,0,0.12);
 }
 
-.content {
-    max-width: 650px;
-    margin: 40px auto 0;
-    font-size: 1rem;
-    opacity: 0.9;
-    line-height: 1.8;
+.main-image:hover{
+    transform:scale(1.02);
+    box-shadow:0 22px 50px rgba(0,0,0,0.18);
 }
 
-.section-title {
-    font-family: Cambria, serif;
-    font-size: 1.4rem;
-    margin-top: 50px;
-    margin-bottom: 10px;
+.content{
+    max-width:650px;
+    margin:35px auto 0;
+    font-size:1.05rem;
+    line-height:1.9;
+    text-align:left;
 }
 
-.home-button {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
+.section-title{
+    font-family:Cambria, serif;
+    font-size:1.45rem;
+    margin-top:45px;
+    margin-bottom:10px;
+    font-weight:bold;
 }
 
-.home-button a {
-    background: #203512;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 18px;
-    font-size: 12px;
-    border-radius: 8px;
-    letter-spacing: 1px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    transition: 0.2s ease;
+p{
+    margin:10px 0;
 }
 
-.home-button a:hover {
-    background: #faa500;
-    color: #203512;
+.home-button{
+    position:fixed;
+    bottom:25px;
+    left:25px;
+}
+
+.home-button a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:13px 20px;
+    font-size:12px;
+    border-radius:10px;
+    letter-spacing:1px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
+    transition:0.25s ease;
+}
+
+.home-button a:hover{
+    background:#faa500;
+    color:#203512;
+}
+
+.map-button{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+}
+
+.map-button a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:13px 20px;
+    font-size:12px;
+    border-radius:10px;
+    letter-spacing:1px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
+    transition:0.25s ease;
+}
+
+.map-button a:hover{
+    background:#faa500;
+    color:#203512;
+}
+
+footer{
+    width:100%;
+    margin-top:80px;
+    padding:25px 0;
+    border-top:1px solid #e5e5e5;
+    font-size:14px;
+    color:#203512;
+}
+
+.footer-content{
+    width:736px;
+    margin:0 auto;
+    text-align:left;
 }
 
 </style>
@@ -86,50 +138,68 @@ h1 {
 
 <div class="container">
 
-<h1>Bahamas</h1>
+<h1><b>Bahamas</b></h1>
 <div class="divider"></div>
 
-<img 
-src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
+<img
+src="https://i.pinimg.com/1200x/13/5c/c4/135cc4d4b40e95512f8586d8afba42bf.jpg"
 class="main-image"
-alt="Bahamas Beach">
+alt="Bahamas Beach"
+title="Bahamas White Beach Resort"
+onclick="openImage()"
+>
 
 <div class="content">
 
 <p>
-The Bahamas is a place where turquoise waters meet endless horizons.
-With over 700 islands, it feels both expansive and intimate —
-a quiet rhythm shaped by sea and sun.
+Some places stay in your mind long before you ever see them in person. The Bahamas feels like one of those places. It represents a quiet escape from routines and expectations, a space where you can breathe deeply and feel present. I imagine standing by the shore, listening to the waves, and feeling a sense of calm that is hard to find in everyday life. It is not only about travel but about the feeling of finally arriving somewhere that matches what you have been longing for.
 </p>
 
-<div class="section-title">Nature</div>
+<div class="section-title"><b>Nature</b></div>
 <p>
-Crystal-clear waters, coral reefs, and white-sand beaches
-define the landscape. The ocean is not just scenery —
-it is the center of life.
+The clear water and bright sand create a landscape that feels almost unreal. The ocean becomes more than scenery because it shapes the rhythm of the day and invites people to slow down and simply exist within the moment.
 </p>
 
-<div class="section-title">Culture</div>
+<div class="section-title"><b>Culture</b></div>
 <p>
-Bahamian culture blends African heritage, colonial history,
-and island spirit. Music, festivals, and colorful architecture
-reflect a deep sense of identity and joy.
+Bahamian culture reflects warmth and connection. Music, traditions, and vibrant surroundings show a strong sense of community and pride that makes visitors feel welcome even if they have just arrived.
 </p>
 
-<div class="section-title">Atmosphere</div>
+<div class="section-title"><b>Atmosphere</b></div>
 <p>
-Life moves slower here. The breeze carries salt and warmth,
-and each sunset feels deliberate — soft, glowing,
-and unhurried.
+Life seems gentler here. The air feels warm, conversations feel unhurried, and sunsets become something you pause for instead of rushing past. It feels like a reminder that peace can exist in simple moments.
 </p>
 
 </div>
-
 </div>
 
 <div class="home-button">
-    <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 </div>
+
+<div class="map-button">
+<a href="map.html">Back to Map</a>
+</div>
+
+<footer>
+<div class="footer-content">
+Created by: Noel Bandoy
+</div>
+</footer>
+
+<script>
+let imageWindow = null;
+
+function openImage(){
+    const url = "https://i.pinimg.com/1200x/13/5c/c4/135cc4d4b40e95512f8586d8afba42bf.jpg";
+
+    if(imageWindow == null || imageWindow.closed){
+        imageWindow = window.open(url,"bahamasFullView");
+    }else{
+        imageWindow.focus();
+    }
+}
+</script>
 
 </body>
 </html>
