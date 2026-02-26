@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=736">
+<title>Interactive Image Map</title>
+
+<style>
+
+/* ================= BASE ================= */
+body {
+    margin: 0;
+    background: #ffffff;
+    font-family: "Segoe UI", Calibri, Arial, sans-serif;
+    color: #203512;
+    text-align: center;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    width: 736px; /* fixed width to match coordinates */
+    margin: 60px auto 120px;
+}
+
+/* ================= TITLE ================= */
+h1 {
+    font-family: Cambria, serif;
+    font-size: 2.7rem;
+    margin-bottom: 15px;
+}
+
+.divider {
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(to right, #a85100, #faa500);
+    margin: 20px auto 50px;
+    border-radius: 5px;
+}
+
+/* ================= IMAGE ================= */
+.main-image {
+    width: 736px;   /* must match coordinate system */
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* ================= DESCRIPTION ================= */
+.description {
+    max-width: 650px;
+    margin: 40px auto 0;
+    font-size: 1rem;
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+/* ================= STICKY HOME BUTTON ================= */
+.home-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+.home-button a {
+    background: #203512;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 12px;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: 0.2s ease;
+}
+
+.home-button a:hover {
+    background: #faa500;
+    color: #203512;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Layers Within</h1>
+<div class="divider"></div>
+
+<img 
+src="https://i.pinimg.com/736x/fb/92/2c/fb922c8c79edaa054e0032eace1e4a25.jpg"
+usemap="#image-map"
+class="main-image"
+alt="Mapped Image">
+
+<p class="description">
+Hover and click through different parts of the image.
+Each region represents a different country.
+</p>
+
+</div>
+
+<!-- ================= IMAGE MAP ================= -->
+<map name="image-map">
+
+<!-- 🇮🇹 Italy (Top Left Circle) -->
+<area 
+    shape="circle"
+    coords="230,240,170"
+    href="https://www.italia.it/en"
+    alt="Italy"
+    title="Italy">
+
+<!-- 🇬🇧 United Kingdom (Top Right Rectangle) -->
+<area 
+    shape="rect"
+    coords="368,0,736,430"
+    href="https://www.bbc.com/news/world-europe-18023389"
+    alt="United Kingdom"
+    title="United Kingdom">
+
+<!-- 🇨🇦 Canada (Middle Left Polygon) -->
+<area 
+    shape="poly"
+    coords="0,430, 368,430, 368,870, 0,870"
+    href="https://canada-info.ca/en/"
+    alt="Canada"
+    title="Canada">
+
+<!-- 🇧🇸 Bahamas (Bottom Left Polygon) -->
+<area 
+    shape="poly"
+    coords="0,870, 368,870, 368,1308, 0,1308"
+    href="https://www.lonelyplanet.com/destinations/the-bahamas"
+    alt="Bahamas"
+    title="Bahamas">
+
+<!-- 🇯🇵 Japan (Right Bottom Polygon) -->
+<area 
+    shape="poly"
+    coords="368,430, 736,430, 736,1308, 368,1308"
+    href="https://www.japan.travel/en/"
+    alt="Japan"
+    title="Japan">
+
+</map>
+
+<!-- ================= HOME BUTTON ================= -->
+<div class="home-button">
+    <a href="index.html">Home</a>
+</div>
+
+</body>
+</html>
