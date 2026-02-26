@@ -7,76 +7,127 @@
 
 <style>
 
-body {
-    margin: 0;
-    background: #ffffff;
-    font-family: "Segoe UI", Calibri, Arial, sans-serif;
-    color: #203512;
-    text-align: center;
+body{
+    margin:0;
+    background:#ffffff;
+    font-family:"Segoe UI", Calibri, Arial, sans-serif;
+    color:#203512;
 }
 
-.container {
-    width: 736px;
-    margin: 60px auto 120px;
+.container{
+    width:736px;
+    margin:60px auto 120px;
 }
 
-h1 {
-    font-family: Cambria, serif;
-    font-size: 2.7rem;
-    margin-bottom: 15px;
+h1{
+    font-family:Cambria, serif;
+    font-size:2.8rem;
+    margin-bottom:10px;
+    text-align:center;
+    font-weight:bold;
 }
 
-.divider {
-    width: 70px;
-    height: 3px;
-    background: linear-gradient(to right, #a85100, #faa500);
-    margin: 20px auto 50px;
-    border-radius: 5px;
+.divider{
+    width:80px;
+    height:4px;
+    background:linear-gradient(to right,#a85100,#faa500);
+    margin:20px auto 40px;
+    border-radius:6px;
 }
 
-.main-image {
-    width: 736px;
-    height: auto;
-    border-radius: 18px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+.main-image{
+    width:620px;
+    display:block;
+    margin:0 auto;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s ease;
+    box-shadow:0 18px 40px rgba(0,0,0,0.12);
 }
 
-.content {
-    max-width: 650px;
-    margin: 40px auto 0;
-    font-size: 1rem;
-    opacity: 0.9;
-    line-height: 1.8;
+.main-image:hover{
+    transform:scale(1.02);
+    box-shadow:0 22px 50px rgba(0,0,0,0.18);
 }
 
-.section-title {
-    font-family: Cambria, serif;
-    font-size: 1.4rem;
-    margin-top: 50px;
-    margin-bottom: 10px;
+.content{
+    max-width:650px;
+    margin:35px auto 0;
+    font-size:1.05rem;
+    line-height:1.9;
+    text-align:left;
 }
 
-.home-button {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
+.section-title{
+    font-family:Cambria, serif;
+    font-size:1.45rem;
+    margin-top:45px;
+    margin-bottom:10px;
+    font-weight:bold;
 }
 
-.home-button a {
-    background: #203512;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 18px;
-    font-size: 12px;
-    border-radius: 8px;
-    letter-spacing: 1px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    transition: 0.2s ease;
+p{
+    margin:10px 0;
 }
 
-.home-button a:hover {
-    background: #faa500;
-    color: #203512;
+.home-button{
+    position:fixed;
+    bottom:25px;
+    left:25px;
+}
+
+.home-button a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:13px 20px;
+    font-size:12px;
+    border-radius:10px;
+    letter-spacing:1px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
+    transition:0.25s ease;
+}
+
+.home-button a:hover{
+    background:#faa500;
+    color:#203512;
+}
+
+.map-button{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+}
+
+.map-button a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:13px 20px;
+    font-size:12px;
+    border-radius:10px;
+    letter-spacing:1px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
+    transition:0.25s ease;
+}
+
+.map-button a:hover{
+    background:#faa500;
+    color:#203512;
+}
+
+footer{
+    width:100%;
+    margin-top:80px;
+    padding:25px 0;
+    border-top:1px solid #e5e5e5;
+    font-size:14px;
+}
+
+.footer-content{
+    width:736px;
+    margin:0 auto;
+    text-align:left;
 }
 
 </style>
@@ -86,50 +137,67 @@ h1 {
 
 <div class="container">
 
-<h1>Canada</h1>
+<h1><b>Canada</b></h1>
 <div class="divider"></div>
 
-<img 
-src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce"
+<img
+src="https://i.pinimg.com/1200x/a4/b6/b7/a4b6b7f59bd757c35d10f2fe936462ce.jpg"
 class="main-image"
-alt="Canada Landscape">
+alt="Canada Landscape"
+onclick="openImage()"
+>
 
 <div class="content">
 
 <p>
-Canada is a land of vast space and quiet strength.
-From rugged mountains to calm lakes, it holds a sense
-of openness that feels grounding and expansive at once.
+Canada feels like a place where space allows people to think clearly and breathe deeply. I imagine standing beside a quiet lake surrounded by mountains, feeling small in a comforting way. It represents distance from noise and pressure, a chance to slow down and reconnect with what truly matters.
 </p>
 
-<div class="section-title">Nature</div>
+<div class="section-title"><b>Nature</b></div>
 <p>
-Forests stretch endlessly, northern lights paint the sky,
-and seasons shift dramatically. Nature shapes both the
-landscape and the lifestyle.
+Wide forests, snowy peaks, and calm waters create scenes that feel peaceful and steady. Nature is always present, shaping daily life and reminding people to respect the world around them.
 </p>
 
-<div class="section-title">Culture</div>
+<div class="section-title"><b>Culture</b></div>
 <p>
-Built on diversity and inclusion, Canada blends Indigenous
-heritage with global influences, creating cities that feel
-both international and deeply local.
+Different cultures meet and coexist here, forming communities that value respect and openness. Traditions from many backgrounds blend together while still keeping their own identity.
 </p>
 
-<div class="section-title">Atmosphere</div>
+<div class="section-title"><b>Atmosphere</b></div>
 <p>
-Life moves with balance here — ambitious yet calm,
-modern yet connected to the land.
-It is space, silence, and subtle beauty.
+The atmosphere feels balanced and thoughtful. Cities feel modern yet calm, while quieter places invite reflection and rest. It seems like a country where ambition and peace can exist together.
 </p>
 
 </div>
-
 </div>
 
 <div class="home-button">
-    <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 </div>
+
+<div class="map-button">
+<a href="map.html">Back to Map</a>
+</div>
+
+<footer>
+<div class="footer-content">
+Created by: Noel Bandoy
+</div>
+</footer>
+
+<script>
+let imageWindow = null;
+
+function openImage(){
+    const url = "https://i.pinimg.com/1200x/a4/b6/b7/a4b6b7f59bd757c35d10f2fe936462ce.jpg";
+
+    if(imageWindow == null || imageWindow.closed){
+        imageWindow = window.open(url,"canadaFullView");
+    }else{
+        imageWindow.focus();
+    }
+}
+</script>
 
 </body>
 </html>
