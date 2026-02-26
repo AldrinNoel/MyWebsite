@@ -140,12 +140,13 @@ footer{
 <h1><b>Canada</b></h1>
 <div class="divider"></div>
 
-<img
-src="https://i.pinimg.com/1200x/a4/b6/b7/a4b6b7f59bd757c35d10f2fe936462ce.jpg"
-class="main-image"
-alt="Canada Landscape"
-onclick="openImage()"
->
+<a href="https://i.pinimg.com/1200x/a4/b6/b7/a4b6b7f59bd757c35d10f2fe936462ce.jpg" target="place">
+    <img 
+        src="https://i.pinimg.com/1200x/a4/b6/b7/a4b6b7f59bd757c35d10f2fe936462ce.jpg"
+        class="main-image"
+        alt="Canada Landscape"
+        title="Canada Landscape">
+</a>
 
 <div class="content">
 
@@ -185,19 +186,6 @@ Created by: Noel Bandoy
 </div>
 </footer>
 
-<script>
-let imageWindow = null;
-
-function openImage(){
-    const url = "https://i.pinimg.com/1200x/a4/b6/b7/a4b6b7f59bd757c35d10f2fe936462ce.jpg";
-
-    if(imageWindow == null || imageWindow.closed){
-        imageWindow = window.open(url,"canadaFullView");
-    }else{
-        imageWindow.focus();
-    }
-}
-</script>
 
 </body>
 </html>
