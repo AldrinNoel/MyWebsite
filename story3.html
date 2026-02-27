@@ -1,148 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Learning to Live, Not Just Survive</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Story part 3</title>
+
 <style>
- body {
+
+body {
     margin: 0;
-    padding: 0;
-    background-color: #ffffff;
+    background: #ffffff;
+    font-family: "Segoe UI", Calibri, Arial, sans-serif;
     color: #203512;
-    font-family: Calibri, Arial, sans-serif;
     line-height: 1.8;
-  
-  
 }
 
 .container {
-    max-width: 800px;
-    margin: 80px auto;
+    max-width: 850px;
+    margin: 100px auto 80px;
     padding: 0 24px;
 }
 
+/* ===== NAVIGATION ===== */
+.top-nav {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    padding: 10px 25px;
+    border-radius: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    font-size: 13px;
+    letter-spacing: 1px;
+    z-index: 1000;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #203512;
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: 0.25s ease;
+}
+
+.top-nav a:hover {
+    color: #faa500;
+    opacity: 1;
+}
+
+/* ===== TITLE ===== */
 h1 {
     font-family: Cambria, serif;
-    font-size: 2.6rem;
-    margin-bottom: 48px;
-    color: #203512;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-h2 {
-    font-family: Cambria, serif;
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-    margin-top: 48px;
-    color: #a85100;
+hr {
+    border: none;
+    height: 2px;
+    width: 50px;
+    background: #faa500;
+    margin: 20px auto 60px;
 }
 
+/* ===== PARAGRAPH ===== */
 p {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 1.05em;
+    margin-bottom: 40px;
     text-align: justify;
+    text-align-last: left;
 }
 
-footer {
-    margin-top: 80px;
-    padding-top: 16px;
-    border-top: 1px solid #a85100;
-    text-align: right;
+/* ===== IMAGE STYLE ===== */
+.float-img {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
 }
 
-footer p {
-    font-size: 0.9rem;
-    color: #203512;
-}
-  .back-top {
-    text-align: right;
-  }
-.back-top a{
-    text-decoration: none;
-    font-size: 13px;
-    color: #203512;
-    opacity: 0.7;
-    
-    transition: 0.2s ease;
+.float-img:hover {
+    transform: scale(1.04);
 }
 
-.back-top a:hover{
-    opacity: 1;
-    color: #faa500;
-}
-  .back-home {
-    margin: 20px 0;         
-    text-align: left;         
+.left {
+    float: left;
+    margin: 0 25px 15px 0;
 }
 
-.back-home a {
-    text-decoration: none;     
-    font-size: 14px;          
-    color: #203512;           
-    font-weight: bold;
-    opacity: 0.8;             
-    transition: 0.2s ease;
+.right {
+    float: right;
+    margin: 0 0 15px 25px;
 }
 
-.back-home a:hover {
-    color: #faa500;           
-    opacity: 1;
+.clear {
+    clear: both;
 }
-  </style>
+
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 70px;
+    text-align: left;
+    font-size: 0.9em;
+    border-top: 1px solid #203512;
+    padding-top: 15px;
+}
+
+/* ===== FLOAT BUTTONS ===== */
+.float-buttons{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    display:flex;
+    gap:10px;
+}
+
+.float-buttons a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 14px;
+    font-size:12px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition:0.2s ease;
+}
+
+.float-buttons a:hover{
+    background:#faa500;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    .float-img,
+    .left,
+    .right {
+        float: none;
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-    <main class="container">
-        <h1 id="top">Learning to Live, Not Just Survive</h1>
-
-        <section>
-            
-            <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I thought I knew myself until I met my friends. I always believed I had my life figured out. I wanted to live in comfort, away from troubles, and just exist in peace. I imagined myself working in isolation, in a place where sand touched my toes and I could see the ocean or a calm lake right in front of me. I could actually feel the refreshing breeze brushing past my skin, blowing the wind chimes that would sing me into a relaxing sleep. Back then, that life felt like everything I wanted, like it was enough for me.
-            </p>
-        </section>
-
-        <section>
-       
-            <p>
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After I graduate, I wanted to start working right away. I planned to build a career in cloud
-                engineering, make a steady income, and eventually create a business empire that would sustain
-                me for the rest of my life. That was what I thought I would always do. I was convinced that
-                focusing on stability and success was just how life was supposed to be, and honestly, I was
-                fine with that.
-            </p>
-
-            <p>
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;But then I met the people around me, and things slowly changed. It is actually true that the people you surround yourself with affect how you think and how you act, sometimes in ways you do not even notice at first. Because of them, I realized that spending the rest of my life by myself would feel meaningless. I want to be with people who make me laugh, cry, and feel like
-                I am accepted for who I want to be.
-            </p>
-
-            <p>
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That is where the conflict comes in. I cannot just force myself into people’s lives. I sometimes feel scared that my future might be left with no one but me. But I also learned that if the people I treasure do not treasure me the same way, that is actually not my problem. I did not need to try so hard. I just needed the right people.
-            </p>
-        </section>
-
-        <section>
-           
-            <p>
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now, my goal is no longer just to survive or live comfortably. It is not only about money or success. My goal is actually to live, like really live, with meaning, connection, and people who make life feel real. And honestly, that future feels more fulfilling than the quiet, isolated life I once thought I wanted.
-            </p>
- <div class="back-top">
-  <a href="#top">Back to top ↑</a>
+<div class="top-nav">
+    <a href="#p1">Thoughts</a>
+    <a href="#p2">Truth</a>
+    <a href="#p3">Live</a>
 </div>
-          
-          
 
-      <!-- DITSSSS LAGAYANNN NGGG PA BALIK LANDING PAGE -->
-<div class="back-home">
-  <a href="index.html">← Back to Home</a>
+<div class="container">
+
+<h1 id="top">Learning to Live, Not Just Survive</h1>
+<hr>
+
+<!-- ===== SECTION 1 ===== -->
+<p id="p1">
+<a href="https://i.pinimg.com/1200x/16/3e/04/163e042b2bf12875969781541f2ae4d8.jpg" target="place">
+    <img 
+        src="https://i.pinimg.com/1200x/16/3e/04/163e042b2bf12875969781541f2ae4d8.jpg"
+        class="float-img left"
+        alt="Visual Representation of the Future"
+        title="Visual Representation of the Future">
+</a>
+ <strong>I thought I knew myself until I met my friends.</strong> I always believed I had my life figured out. I wanted to live in comfort, away from troubles, and just exist in peace. I imagined myself working in isolation, in a place where sand touched my toes and I could see the ocean or a calm lake right in front of me. I could actually feel the refreshing breeze brushing past my skin, blowing the wind chimes that would sing me into a relaxing sleep.<strong> Back then, that life felt like everything I wanted, like it was enough for me.</strong>
+
+        After I graduate, I wanted to start working right away. I planned to build a career in cloud engineering, make a steady income, and eventually create a business empire that would sustain me for the rest of my life. That was what I thought I would always do.<strong> I was convinced that focusing on stability and success was just how life was supposed to be,</strong> and honestly, I was fine with that.
+</p>
+
+<div class="clear"></div>
+
+<!-- ===== SECTION 2 ===== -->
+<p id="p2">
+<a href="https://i.pinimg.com/736x/84/40/20/8440204b9a22977d9f9be75d5ed6e381.jpg"target="place">
+    <img 
+        src="https://i.pinimg.com/736x/84/40/20/8440204b9a22977d9f9be75d5ed6e381.jpg"
+        class="float-img right"
+        alt="Friends"
+        title="Friends">
+</a>
+
+But then I met the people around me, and things slowly changed.<strong> It is actually true that the people you surround yourself with affect how you think and how you act,</strong> sometimes in ways you do not even notice at first. Because of them, I realized that spending the rest of my life by myself would feel meaningless.<strong> I want to be with people who make me laugh, cry, and feel like I am accepted for who I want to be.</strong>
+
+        That is where the conflict comes in. I cannot just force myself into people’s lives. I sometimes feel scared that my future might be left with no one but me. <strong>But I also learned that if the people I treasure do not treasure me the same way, that is actually not my problem.</strong> I did not need to try so hard. I just needed the right people.
+</p>
+
+<div class="clear"></div>
+
+<!-- ===== SECTION 3 ===== -->
+<p id="p3">
+<a href="https://i.pinimg.com/736x/ed/90/6b/ed906b3208be1fd7bc0154a09d5163b6.jpg"target="place">
+    <img 
+        src="https://i.pinimg.com/736x/ed/90/6b/ed906b3208be1fd7bc0154a09d5163b6.jpg"
+        class="float-img left"
+        alt="future"
+        title="future">
+</a>
+
+<strong>Now, my goal is no longer just to survive or live comfortably.</strong> It is not only about money or success. My goal is actually to live, like really live, with meaning, connection, and people who make life feel real.<strong> And honestly, that future feels more fulfilling than the quiet, isolated life I once thought I wanted.</strong>
+</p>
+
+<div class="clear"></div>
+
+<div class="footer">
+Written by Aldrin Noel Bandoy
 </div>
-<!-- DITSSSS LAGAYANNN NGGG PA BALIK LANDING PAGE -->
-        </section>
 
-        <footer>
-            <p>Written by Aldrin Noel Bandoy</p>
-        </footer>
-    </main>
+<div class="float-buttons">
+  <a href="#top">Top ↑</a>
+  <a href="index.html">Home</a>
+</div>
+
+</div>
 
 </body>
 </html>
