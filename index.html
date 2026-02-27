@@ -231,9 +231,11 @@ footer{
 <div class="bottom-images">
 
     <div class="box">
-        <img src="https://i.pinimg.com/736x/a4/35/65/a43565831f799546c927c0f6a647f833.jpg"
-             alt="Creative expression"
-             title="Creative Expression">
+        <a href="YOUR_GIF_LINK.gif" target="_blank">
+            <img src="IMG_9658.gif"
+             alt="Abstract inspiration"
+             title="Abstract Inspiration">
+        </a>
         <h4>Creative Expression</h4>
         <p>My most recently took picture.</p>
     </div>
@@ -247,9 +249,11 @@ footer{
     </div>
 
     <div class="box">
-        <img src="https://i.pinimg.com/736x/2d/9a/6b/2d9a6b232703eb1cf8c010789bd9e145.jpg"
+        <a href="YOUR_GIF_LINK.gif" target="_blank">
+            <img src="IMG_3552.gif"
              alt="Abstract inspiration"
              title="Abstract Inspiration">
+        </a>
         <h4>Abstract Inspiration</h4>
         <p>A physical representation of Art Block.</p>
     </div>
@@ -260,27 +264,6 @@ footer{
     <p>© 2026 Noel Bandoy. All rights reserved.</p>
 </footer>
 
-<!-- LIGHTBOX -->
-<div id="lightbox">
-    <img src="" alt="Expanded image">
-</div>
-
-<script>
-const images = document.querySelectorAll(".box img, .circle img");
-const lightbox = document.getElementById("lightbox");
-const lightImg = lightbox.querySelector("img");
-
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightImg.src = img.src;
-  });
-});
-
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-</script>
 
 </body>
 </html>
