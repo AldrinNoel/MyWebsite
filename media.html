@@ -7,7 +7,6 @@
 
 <style>
 
-/* ================= BASE ================= */
 body {
     margin: 0;
     background: #ffffff;
@@ -23,7 +22,6 @@ body {
     padding: 0 30px;
 }
 
-/* ================= TITLE ================= */
 h1 {
     font-family: Cambria, serif;
     font-size: 3rem;
@@ -40,7 +38,6 @@ h1 {
     border-radius: 5px;
 }
 
-/* ================= HERO ================= */
 .hero {
     margin-bottom: 90px;
 }
@@ -65,7 +62,6 @@ h1 {
     opacity: 0.85;
 }
 
-/* ================= MEDIA ROW ================= */
 .media-section {
     display: flex;
     justify-content: center;
@@ -103,7 +99,6 @@ h1 {
     color: #faa500;
 }
 
-/* ================= LIGHTBOX ================= */
 .lightbox {
     position: fixed;
     inset: 0;
@@ -119,8 +114,6 @@ h1 {
     max-height: 85%;
     border-radius: 12px;
 }
-
-/* ================= FLOAT BUTTON ================= */
 .float-buttons{
     position:fixed;
     bottom:25px;
@@ -143,7 +136,6 @@ h1 {
     color:#203512;
 }
 
-/* ================= FOOTER ================= */
 .footer {
     margin-top: 100px;
     font-size: 0.9em;
@@ -158,84 +150,83 @@ h1 {
 
 <div class="container">
 
-<h1>What I Consume Becomes a Part of Me</h1>
+<h1 id="top">What I Consume Becomes a Part of Me</h1>
 <div class="title-divider"></div>
 
 <div class="hero">
     <div class="circle">
-        <img src="https://i.pinimg.com/736x/4d/82/89/4d82898a0bde1c3a2f3fb59edd18ddb6.jpg" 
-             alt="Close-up profile portrait" 
-             title="The influences that shape me">
+        <a href="https://i.pinimg.com/736x/4d/82/89/4d82898a0bde1c3a2f3fb59edd18ddb6.jpg" target="place">
+            <img 
+                src="https://i.pinimg.com/736x/4d/82/89/4d82898a0bde1c3a2f3fb59edd18ddb6.jpg"
+                class="main-image"
+                alt="Close-up profile portrait"
+                title="Close-up profile portrait">
+        </a>
     </div>
 
     <div class="profile-text">
-        The music I replay during the times of deep confusion, yearning, and joy. To the films that I sit with Intently,
-        the shows that linger in my thoughts. They shape how I see the world
-        and quietly influence who I am becoming.
+        The music I replay during the times of deep confusion, yearning, and joy.
+        The films that I sit with intently.
+        The shows that linger in my thoughts.
+        They shape how I see the world and quietly influence who I am becoming.
     </div>
 </div>
 
+
 <div class="media-section">
 
+    <!-- My Music -->
     <div class="box">
         <a href="mybeats.html">
-            <img src="https://i.pinimg.com/736x/06/ac/30/06ac30205eac6c241cb15a8224e4f8e8.jpg" 
-                 alt="Graphic representation of music and beats" 
-                 title="Explore My Music Collection">
+            <img 
+                src="https://i.pinimg.com/736x/06/ac/30/06ac30205eac6c241cb15a8224e4f8e8.jpg"
+                class="main-image"
+                alt="Graphic representation of music and beats"
+                title="Explore My Music Collection">
         </a>
         <h2>My Music</h2>
     </div>
 
+    <!-- My Films -->
     <div class="box">
         <a href="myfilms.html">
-            <img src="https://i.pinimg.com/736x/46/c9/fc/46c9fc991c3770f46581cc01cd50462c.jpg" 
-                 alt="Cinematic visual representing films" 
-                 title="Browse My Favorite Films">
+            <img 
+                src="https://i.pinimg.com/736x/46/c9/fc/46c9fc991c3770f46581cc01cd50462c.jpg"
+                class="main-image"
+                alt="Cinematic visual representing films"
+                title="Browse My Favorite Films">
         </a>
         <h2>My Films</h2>
     </div>
 
+    <!-- My Shows -->
     <div class="box">
         <a href="myshows.html">
-            <img src="https://i.pinimg.com/736x/44/29/7c/44297cbeea06ae4c5c0b2f7e649e7fca.jpg" 
-                 alt="Still image representing television shows" 
-                 title="View My TV Show Recommendations">
+            <img 
+                src="https://i.pinimg.com/736x/44/29/7c/44297cbeea06ae4c5c0b2f7e649e7fca.jpg"
+                class="main-image"
+                alt="Still image representing television shows"
+                title="View My TV Show Recommendations">
         </a>
         <h2>My Shows</h2>
     </div>
+
 </div>
+
 
 <div class="footer">
-Created by Aldrin Noel Bandoy
+    Created by Aldrin Noel Bandoy
 </div>
 
 </div>
+
 
 <div class="float-buttons">
+  <a href="#top">Top ↑</a>
   <a href="index.html">Home</a>
 </div>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <img src="">
-</div>
 
-<script>
-const images = document.querySelectorAll(" .circle img");
-const lightbox = document.getElementById("lightbox");
-const lightImg = lightbox.querySelector("img");
-
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightImg.src = img.src;
-  });
-});
-
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-</script>
 
 </body>
 </html>
