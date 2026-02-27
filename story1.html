@@ -7,7 +7,6 @@
 
 <style>
 
-/* ================= BASE ================= */
 body {
     margin: 0;
     background: #ffffff;
@@ -22,7 +21,6 @@ body {
     padding: 0 24px;
 }
 
-/* ================= MINIMAL FLOAT NAV ================= */
 .top-nav {
     position: fixed;
     top: 25px;
@@ -50,7 +48,6 @@ body {
     opacity: 1;
 }
 
-/* ================= TITLE ================= */
 h1 {
     font-family: Cambria, serif;
     font-size: 2.5rem;
@@ -66,14 +63,12 @@ hr {
     margin: 20px auto 60px;
 }
 
-/* ================= PARAGRAPHS ================= */
 p {
     font-size: 1.05em;
     margin-bottom: 40px;
     text-align: justify;
 }
 
-/* ================= SCATTERED IMAGES ================= */
 .float-img {
     width: 260px;
     height: 180px;
@@ -103,7 +98,6 @@ p {
     clear: both;
 }
 
-/* ================= FOOTER ================= */
 .footer {
     margin-top: 70px;
     text-align: center;
@@ -112,7 +106,6 @@ p {
     padding-top: 15px;
 }
 
-/* ================= LIGHTBOX ================= */
 .lightbox {
     position: fixed;
     inset: 0;
@@ -182,7 +175,15 @@ p {
 
 <!-- PARAGRAPH 1 -->
 <p id="p1">
-<img src="https://i.pinimg.com/736x/88/bb/3b/88bb3b83e241e2b7481ed9c457d5f594.jpg" class="float-img left card" alt="">
+<a href="https://i.pinimg.com/736x/88/bb/3b/88bb3b83e241e2b7481ed9c457d5f594.jpg">
+    <img 
+        src="https://i.pinimg.com/736x/88/bb/3b/88bb3b83e241e2b7481ed9c457d5f594.jpg"
+        class="float-img left card"
+        alt="Morning Sunrise"
+        title="UE hallway">
+</a>
+
+    
 <strong>I have this thing where I would think through situations and stay calm</strong>, when it feels like a solution is absolutely needed. When things get serious, my brain just kind of locks in and starts working. It helps, but it’s also stressful having to rely on it too often <strong>strains not only my mental health but also physically</strong>. Over time, it became an instinct something that guides me during the tougher moments of my life.
 </p>
 
@@ -190,7 +191,13 @@ p {
 
 <!-- PARAGRAPH 2 -->
 <p id="p2">
-<img src="https://i.pinimg.com/736x/25/12/d7/2512d7f8c87f0f40c12d4c51199d8171.jpg" class="float-img right card" alt="">
+<a href="https://i.pinimg.com/736x/25/12/d7/2512d7f8c87f0f40c12d4c51199d8171.jpg">
+    <img 
+        src="https://i.pinimg.com/736x/25/12/d7/2512d7f8c87f0f40c12d4c51199d8171.jpg"
+        class="float-img right card"
+        alt="China Town Alley"
+        title="China Town">
+</a>
 There was this one experience I had in high school that changed how I saw AI. It wasn’t anything dramatic, just a normal school day, but the way it happened made me stop and think about learning, pressure, and how much we actually rely on convenience.
 
 It was just a regular day, and we were given an in-class assignment. Naturally, I would’ve just used AI. That felt like the obvious choice. But for some reason, <strong>I felt this rush inside of me telling me to stop.</strong> And I actually did. I paused, looked to my left, then to my right, and saw that almost everyone was already done. That’s when I felt this strange emptiness. Not jealousy, just this quiet thought sitting in my head <strong>is the future generation going to be alright?</strong> I didn’t have much time to think about it though, because the situation quickly became urgent. The teacher announced that there were only ten minutes left. Adrenaline kicked in, and my instincts took over. There really wasn’t another option, so I used AI. In an instant, the essay was done. All that was left was to submit it on time. But when I read the first paragraph of the two-paragraph essay, it didn’t feel right. <strong>It didn’t sound like me.</strong> So I revised it, changing the wording and structure until it felt more like something I would actually write. With one minute left, my computer suddenly lost its internet connection. I refreshed the page again and again until the submission page finally appeared. With only seconds left, I dragged my downloaded PDF into the submission box and submitted it just in time.
@@ -199,7 +206,13 @@ It was just a regular day, and we were given an in-class assignment. Naturally, 
 
 <!-- PARAGRAPH 3 -->
 <p id="p3">
-<img src="https://i.pinimg.com/736x/96/24/77/9624773541f114b6ad5e3e1366eec753.jpg" class="float-img right card" alt="">
+<a href="https://i.pinimg.com/736x/96/24/77/9624773541f114b6ad5e3e1366eec753.jpg">
+    <img 
+        src="https://i.pinimg.com/736x/96/24/77/9624773541f114b6ad5e3e1366eec753.jpg"
+        class="float-img left card"
+        alt="China Town"
+        title="Sunset in China Town">
+</a>
 In the end, I didn’t feel remorse. I felt happy, exalted, and satisfied. Not because AI did the work, <strong>but because I still stepped in and made choices.</strong> That moment made it clear to me that AI wasn’t the end it was an eye-opener. AI is an evolution that forcefully requires people to adapt to its endless capabilities. There’s no shaking it off. The moment people realized how convenient it was, it became engraved into society, just like calculators. <strong>What matters now is whether we stay involved in the thinking or let convenience take over completely.</strong>
 </p>
 
@@ -216,27 +229,6 @@ Written by Aldrin Noel Bandoy
  
 </div>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <img src="" alt="">
-</div>
-
-<script>
-const cards = document.querySelectorAll(".card");
-const lightbox = document.getElementById("lightbox");
-const lightImg = lightbox.querySelector("img");
-
-cards.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightImg.src = img.src;
-  });
-});
-
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-</script>
 
 </body>
 </html>
