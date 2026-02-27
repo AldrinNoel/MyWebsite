@@ -7,7 +7,6 @@
 
 <style>
 
-/* ================= BASE ================= */
 body {
     margin: 0;
     background: #ffffff;
@@ -21,6 +20,7 @@ body {
     margin: 120px auto 80px;
     padding: 0 24px;
 }
+
 .footer {
     margin-top: 100px;
     font-size: 0.9em;
@@ -56,7 +56,6 @@ body {
     opacity: 1;
 }
 
-/* ================= HEADINGS ================= */
 h1 {
     font-family: Cambria, serif;
     font-size: 2.5rem;
@@ -65,18 +64,19 @@ h1 {
 
 h2 {
     margin-top: 80px;
-    border-bottom: 2px solid #faa500;
-    padding-bottom: 5px;
+    border-left: 4px solid #faa500;
+    padding-left: 12px;
 }
 
-/* ================= MOVIE BLOCK ================= */
+/* ================= MOVIE CARD ================= */
+
 .movie {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .movie-container {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
@@ -88,32 +88,22 @@ h2 {
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.poster img:hover {
+    transform: scale(1.04);
 }
 
 .trailer iframe {
-    width: 400px;
+    width: 420px;
     height: 250px;
-    border-radius: 12px;
-}
-
-/* ================= LIGHTBOX ================= */
-.lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(17,16,8,0.92);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-
-.lightbox img {
-    max-width: 85%;
-    max-height: 80%;
-    border-radius: 12px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 /* ================= FLOAT BUTTONS ================= */
+
 .float-buttons{
     position:fixed;
     bottom:20px;
@@ -137,10 +127,16 @@ h2 {
     background:#faa500;
 }
 
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
     .movie-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .trailer iframe {
+        width: 100%;
     }
 }
 
@@ -152,7 +148,6 @@ h2 {
 <div class="top-nav">
     <a href="#comedy">Comedy</a>
     <a href="#teen">Teen</a>
-    <a href="#horror">Horror / Thriller</a>
 </div>
 
 <div class="container">
@@ -162,181 +157,137 @@ h2 {
 <!-- ================= COMEDY ================= -->
 <h2 id="comedy">Comedy</h2>
 
+<!-- Schitt's Creek -->
 <div class="movie">
 <h3>Schitt's Creek</h3>
+
 <div class="movie-container">
+
 <div class="poster">
-<img src="https://i.pinimg.com/736x/db/75/dd/db75ddc858ea90c39b6d73922e156ad9.jpg" alt="Schitts Creek Poster" class="card">
+<a href="https://i.pinimg.com/736x/db/75/dd/db75ddc858ea90c39b6d73922e156ad9.jpg" target="place">
+    <img 
+        src="https://i.pinimg.com/736x/db/75/dd/db75ddc858ea90c39b6d73922e156ad9.jpg"
+        class="main-image"
+        alt="Schitt's Creek Poster"
+        title="Schitt's Creek Poster">
+</a>
 </div>
+
 <div class="trailer">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/W0uWS6CnC2o?si=APxbH_BoBKie7nQV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/W0uWS6CnC2o" allowfullscreen></iframe>
 </div>
+
 </div>
+
 <p><strong>Synopsis:</strong> After losing their fortune, the wealthy Rose family relocates to a small town they once bought as a joke and must rebuild their lives.</p>
 <p><strong>Director(s):</strong> Dan Levy, Andrew Cividino</p>
-<p><strong>Star:</strong> Eugene Levy, Catherine O'Hara</p>
+<p><strong>Stars:</strong> Eugene Levy, Catherine O'Hara</p>
+
 </div>
 
-<div class="movie">
-<h3>The Big Bang Theory</h3>
-<div class="movie-container">
-<div class="poster">
-<img src="https://i.pinimg.com/736x/67/69/42/67694225ead48a0dc10cfae75d80922b.jpg" alt="Big Bang Theory Poster" class="card">
-</div>
-<div class="trailer">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PpKdAxc0pn4?si=-lvQyYihDoWZS97O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-</div>
-<p><strong>Synopsis:</strong> Four socially awkward scientists experience life changes when a free-spirited neighbor moves in across the hall.</p>
-<p><strong>Director(s):</strong> Mark Cendrowski</p>
-<p><strong>Star:</strong> Jim Parsons, Johnny Galecki, Kaley Cuoco</p>
-</div>
 
+<!-- Abbott Elementary -->
 <div class="movie">
 <h3>Abbott Elementary</h3>
+
 <div class="movie-container">
+
 <div class="poster">
-<img src="https://i.pinimg.com/736x/92/f2/5e/92f25e794414a4bc7bba19794cd7881d.jpg" class="card">
+<a href="https://i.pinimg.com/736x/92/f2/5e/92f25e794414a4bc7bba19794cd7881d.jpg" target="place">
+    <img 
+        src="https://i.pinimg.com/736x/92/f2/5e/92f25e794414a4bc7bba19794cd7881d.jpg"
+        class="main-image"
+        alt="Abbott Elementary Poster"
+        title="Abbott Elementary Poster">
+</a>
 </div>
+
 <div class="trailer">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l4lP8roLz3I?si=j_h9NbXEZBcLLhPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/l4lP8roLz3I" allowfullscreen></iframe>
 </div>
+
 </div>
+
 <p><strong>Synopsis:</strong> A mockumentary about dedicated teachers working at an underfunded public school in Philadelphia.</p>
 <p><strong>Director(s):</strong> Randall Einhorn</p>
-<p><strong>Star:</strong> Quinta Brunson</p>
+<p><strong>Stars:</strong> Quinta Brunson</p>
+
 </div>
+
 
 <!-- ================= TEEN ================= -->
 <h2 id="teen">Teen</h2>
-<div class="movie">
-<h3>I Am Not Okay with This</h3>
-<div class="movie-container">
-<div class="poster">
-<img src="https://i.pinimg.com/736x/69/88/5b/69885bc55f71e9f4a884fa75eb785356.jpg" alt="I Am Not Okay With This Poster" class="card">
-</div>
-<div class="trailer">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BmXxfsZPeu0?si=pReTdaIhjT6ObQIx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-</div>
-<p><strong>Synopsis:</strong> A teenage girl navigates high school and family struggles while discovering she has telekinetic powers.</p>
-<p><strong>Director(s):</strong> Jonathan Entwistle</p>
-<p><strong>Star:</strong> Sophia Lillis</p>
-</div>
 
+<!-- Sex Education -->
 <div class="movie">
 <h3>Sex Education</h3>
+
 <div class="movie-container">
+
 <div class="poster">
-<img src="https://i.pinimg.com/1200x/5f/2e/36/5f2e36d61a1b1a7e0222d97b9736e04f.jpg" alt="Sex Education Poster" class="card">
+<a href="https://i.pinimg.com/1200x/5f/2e/36/5f2e36d61a1b1a7e0222d97b9736e04f.jpg" target="place">
+    <img 
+        src="https://i.pinimg.com/1200x/5f/2e/36/5f2e36d61a1b1a7e0222d97b9736e04f.jpg"
+        class="main-image"
+        alt="Sex Education Poster"
+        title="Sex Education Poster">
+</a>
 </div>
+
 <div class="trailer">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hj0r9vi7dmU?si=JlOm3YtoBGMtoVE-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/Hj0r9vi7dmU" allowfullscreen></iframe>
 </div>
+
 </div>
+
 <p><strong>Synopsis:</strong> A teenager teams up with a classmate to run an underground therapy clinic at school.</p>
 <p><strong>Director(s):</strong> Ben Taylor</p>
-<p><strong>Star:</strong> Asa Butterfield, Gillian Anderson</p>
+<p><strong>Stars:</strong> Asa Butterfield, Gillian Anderson</p>
+
 </div>
 
+
+<!-- Euphoria -->
 <div class="movie">
 <h3>Euphoria</h3>
+
 <div class="movie-container">
+
 <div class="poster">
-<img src="https://i.pinimg.com/736x/f0/47/15/f04715b4a5d665eb4d2878bd21c14ec6.jpg" alt="Euphoria Poster" class="card">
+<a href="https://i.pinimg.com/736x/f0/47/15/f04715b4a5d665eb4d2878bd21c14ec6.jpg" target="place">
+    <img 
+        src="https://i.pinimg.com/736x/f0/47/15/f04715b4a5d665eb4d2878bd21c14ec6.jpg"
+        class="main-image"
+        alt="Euphoria Poster"
+        title="Euphoria Poster">
+</a>
 </div>
+
 <div class="trailer">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SfrZXpG63cw?si=HHwZG2wVSkmWLTo1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/SfrZXpG63cw" allowfullscreen></iframe>
 </div>
+
 </div>
+
 <p><strong>Synopsis:</strong> High school students navigate identity, trauma, and relationships in a raw modern drama.</p>
 <p><strong>Director(s):</strong> Sam Levinson</p>
-<p><strong>Star:</strong> Zendaya</p>
+<p><strong>Stars:</strong> Zendaya</p>
+
 </div>
 
-<!-- ================= HORROR ================= -->
-<h2 id="horror">Horror / Thriller</h2>
 
-<div class="movie">
-<h3>You</h3>
-<div class="movie-container">
-<div class="poster">
-<img src="https://i.pinimg.com/736x/7c/bc/14/7cbc1431c879d0afff726053fc15d349.jpg" alt="You Poster" class="card">
-</div>
-<div class="trailer">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v99ooSjCVhg?si=B0TDNW8Wz9sKWSJT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
-</div>
-</div>
-<p><strong>Synopsis:</strong> A dangerously charming man becomes obsessively fixated on women and manipulates their lives.</p>
-<p><strong>Director(s):</strong> Marcos Siega, Silver Tree (and others)</p>
-<p><strong>Star:</strong> Penn Badgley</p>
-</div>
-
-<div class="movie">
-<h3>Ratched</h3>
-<div class="movie-container">
-<div class="poster">
-<img src="https://i.pinimg.com/1200x/55/1e/a9/551ea9f6a4fe8bd47e07624e718399dd.jpg" alt="Ratched Poster" class="card">
-</div>
-<div class="trailer">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZU9ZtlkSnnE?si=NI9ELPABIo9QtpKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-</div>
-<p><strong>Synopsis:</strong> The origin story of Nurse Mildred Ratched working in a psychiatric hospital filled with disturbing experiments.</p>
-<p><strong>Director(s):</strong> Ryan Murphy</p>
-<p><strong>Star:</strong> Sarah Paulson</p>
-</div>
-
-<div class="movie">
-<h3>Highschool of the Dead</h3>
-<div class="movie-container">
-<div class="poster">
-<img src="https://i.pinimg.com/1200x/3d/b4/f7/3db4f7ed4ea02ab798b396d38a5b4d7d.jpg" alt="Highschool of the Dead Poster" class="card">
-</div>
-<div class="trailer">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3T1_L9DQ2aQ?si=myAJBedAUIlmoG0e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-</div>
-<p><strong>Synopsis:</strong> Students and a school nurse fight to survive a sudden zombie apocalypse.</p>
-<p><strong>Director(s):</strong> Tetsurō Araki</p>
-<p><strong>Star:</strong> Junichi Suwabe / Leraldo Anzaldua</p>
-</div>
 <div class="footer">
 Created by Aldrin Noel Bandoy
 </div>
+
 </div>
 
-<!-- Floating Buttons -->
+
 <div class="float-buttons">
   <a href="#top">Top ↑</a>
   <a href="media.html">Media Page</a>
   <a href="index.html">Home</a>
 </div>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <img src="" alt="">
-</div>
-
-<script>
-const cards = document.querySelectorAll(".card");
-const lightbox = document.getElementById("lightbox");
-const lightImg = lightbox.querySelector("img");
-
-cards.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightImg.src = img.src;
-  });
-});
-
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-</script>
-
-
-  
 
 </body>
 </html>
