@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Bucket List</title>
+
+<style>
+body {
+    margin: 0;
+    background: #ffffff;
+    font-family: "Segoe UI", Calibri, Arial, sans-serif;
+    color: #203512;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 60px auto 80px;
+    padding: 0 20px;
+    position: relative;
+}
+
+h1 {
+    font-family: Cambria, serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    width: 60px;
+    background: #faa500;
+    margin: 15px auto 40px;
+    border-radius: 3px;
+}
+.float-buttons{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+.float-buttons a{
+    background:#203512;
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 16px;
+    font-size:12px;
+    border-radius:6px;
+    letter-spacing:1px;
+    transition:0.2s ease;
+}
+
+.float-buttons a:hover{
+    background:#faa500;
+    color:#203512;
+}
+
+p {
+    font-size: 1.05em;
+    margin-bottom: 40px;
+}
+
+/* Side Images */
+.bucket-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bucket-img:hover {
+    transform: scale(1.1);
+}
+
+/* Correct class names */
+.img-left {
+    left: 90px;
+}
+
+.img-right {
+    right: 90px;
+}
+
+/* Hide images on small screens */
+@media (max-width: 900px) {
+    .bucket-img {
+        display: none;
+    }
+}
+
+.footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>My Bucket List</h1>
+<hr>
+
+<!-- IMAGE 1 -->
+<a href="https://i.pinimg.com/1200x/9b/5c/d9/9b5cd9b6019ef4555a699637d7a4eca2.jpg" target="place">
+    <img src="https://i.pinimg.com/1200x/9b/5c/d9/9b5cd9b6019ef4555a699637d7a4eca2.jpg" class="bucket-img img-left" alt="Siting on the plane" title="Plane Travel">
+</a>
+
+<p>
+1. Travel the world and explore new cultures<br>
+2. Eat traditional dishes in different countries<br>
+3. See the Northern Lights in person<br>
+4. Learn a <strong>new language </strong>fluently<br>
+5. Go on a solo road trip with no destination<br>
+6. Skydive over a scenic landscape<br>
+7. Attend a major film or animation festival<br>
+8. Build my <strong>dream gaming setup</strong><br>
+9. Read all the top-tier manga and manhwas<br>
+10. Experience a traditional tea ceremony in Japan
+</p>
+
+<!-- IMAGE 2 -->
+<a href="https://i.pinimg.com/736x/cb/0b/09/cb0b09723166f60118fbc520d89d7929.jpg" target="place">
+    <img src="https://i.pinimg.com/736x/cb/0b/09/cb0b09723166f60118fbc520d89d7929.jpg" class="bucket-img img-right" alt="Road Trip" title="Road Trip">
+</a>
+
+<p>
+11.<strong> Master </strong>the art of cooking a signature dish<br>
+12. Hike to the top of a famous mountain<br>
+13. Create something that <strong>inspires</strong> others<br>
+14. Achieve financial independence<br>
+15. Feel completely free in my own world
+</p>
+
+<a href="https://i.pinimg.com/736x/eb/62/dc/eb62dc773feb2a4cfcc8c23182c3425f.jpg" target="place">
+    <img src="https://i.pinimg.com/736x/eb/62/dc/eb62dc773feb2a4cfcc8c23182c3425f.jpg" class="bucket-img img-left" alt="Running through the woods" title="Fun">
+</a>
+
+<p>
+16. Visit <strong>all seven continents</strong><br>
+17. Learn to play a musical instrument<br>
+18. Volunteer for a cause I care deeply about<br>
+19. Take a long scenic train journey<br>
+20. Write a <strong>personal memoir </strong>or story
+</p>
+<div class="float-buttons">
+  <a href="index.html">Home</a>
+</div>
+
+</div>
+<div class="footer">
+Created by Aldrin Noel Bandoy
+</div>
+
+</div>
+
+</body>
+</html>
